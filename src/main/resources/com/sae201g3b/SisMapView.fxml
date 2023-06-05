@@ -6,13 +6,17 @@
 
 <?import javafx.scene.control.Button?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.sae201g3b.SisMapController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.sae201g3b.SisMapController">
+    <top>
+        <MenuBar>
+            <Menu text="Carte"/>
+            <Menu text="Dashboard"/>
+        </MenuBar>
+    </top>
+    <center>
+    </center>
+</BorderPane>
 
