@@ -6,7 +6,7 @@ public class Seisme {
     private String Date;
     private String Heure;
     private String Nom;
-    private String Région;
+    private String Region;
     private String Choc;
     private Float X;
     private Float Y;
@@ -15,13 +15,13 @@ public class Seisme {
     private Float Intensite;
     private String Qualite;
 
-    public Seisme(Float identifiant, String date, String heure, String nom, String région, String choc, Float x, Float y, Float latitude, Float longitude, Float intensite, String qualite) {
+    public Seisme(Float identifiant, String date, String heure, String nom, String region, String choc, Float x, Float y, Float latitude, Float longitude, Float intensite, String qualite) {
         //Constructeur
         Identifiant = identifiant;
         Date = date;
         Heure = heure;
         Nom = nom;
-        Région = région;
+        Region = region;
         Choc = choc;
         X = x;
         Y = y;
@@ -64,12 +64,12 @@ public class Seisme {
         Nom = nom;
     }
 
-    public String getRégion() {
-        return Région;
+    public String getRegion() {
+        return Region;
     }
 
-    public void setRégion(String région) {
-        Région = région;
+    public void setRegion(String region) {
+        Region = region;
     }
 
     public String getChoc() {
@@ -130,6 +130,7 @@ public class Seisme {
 
     @Override
     public String toString() {
+        //In : void
         //Out : String
         //Permet d'afficher dans la console les données de notre object
         return "Seisme{" +
@@ -137,7 +138,7 @@ public class Seisme {
                 ", Date='" + Date + '\'' +
                 ", Heure='" + Heure + '\'' +
                 ", Nom='" + Nom + '\'' +
-                ", Région='" + Région + '\'' +
+                ", Région='" + Region + '\'' +
                 ", Choc=" + Choc +
                 ", X=" + X +
                 ", Y=" + Y +

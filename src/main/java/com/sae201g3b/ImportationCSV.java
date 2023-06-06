@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class ImportationCSV {
     //Un Array qui permet de stocké toutes les données du CSV
     private static ArrayList<Seisme> CSV;
-    public static void main(String... args) {
+    public void ImmportCSV() {
         CSV = new ArrayList<>();
 
         //On donne le chamin  vers le fichier
@@ -31,12 +31,12 @@ public class ImportationCSV {
             e.printStackTrace();
         }
         //Pour affichage dans la console
-        for (Seisme seisme : CSV){
-            System.out.println(seisme);
-        }
+        //for (Seisme seisme : CSV){
+        //    System.out.println(seisme);
+        //}
     }
 
-    private static Seisme createSeisme(String[] valeurs) {
+    private Seisme createSeisme(String[] valeurs) {
         //In : String[] valeurs
         //Out : Seisme
         //Permet de recréer les seismes après avoir récupérer les données
@@ -54,7 +54,7 @@ public class ImportationCSV {
         String Qualite = valeurs[11];
         return new Seisme(Identifiant,Date,Heure,Nom,Region,Choc,X,Y,Latitude,Longitude,Intensite,Qualite);
     }
-    private static Float parseFloatOrDefault(String valeur) {
+    private Float parseFloatOrDefault(String valeur) {
         //In : String value
         //Out : Float
         //Permet de mettre des valeurs par défault si il n'y en a pas dans les données
@@ -64,7 +64,14 @@ public class ImportationCSV {
             return 0.0f;
         }
     }
-    private static void getSeisme(Seisme seisme){
+    private void getSeisme(Seisme seisme){
+        //In : Seisme seisme
+        //Out : void
+        //Permet d'afficher les données d'un seisme
         seisme.toString();
+    }
+
+    public static ArrayList<Seisme> getCSV() {
+        return CSV;
     }
 }
