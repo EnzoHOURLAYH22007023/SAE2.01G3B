@@ -6,15 +6,15 @@ public class Seisme {
     private String Heure;
     private String Nom;
     private String Région;
-    private Float Choc;
+    private String Choc;
     private Float X;
     private Float Y;
     private Float Latitude;
     private Float Longitude;
-    private int Intensite;
+    private Float Intensite;
     private String Qualite;
 
-    public Seisme(Float identifiant, String date, String heure, String nom, String région, Float choc, Float x, Float y, Float latitude, Float longitude, int intensite, String qualite) {
+    public Seisme(Float identifiant, String date, String heure, String nom, String région, String choc, Float x, Float y, Float latitude, Float longitude, Float intensite, String qualite) {
         Identifiant = identifiant;
         Date = date;
         Heure = heure;
@@ -69,11 +69,11 @@ public class Seisme {
         Région = région;
     }
 
-    public Float getChoc() {
+    public String getChoc() {
         return Choc;
     }
 
-    public void setChoc(Float choc) {
+    public void setChoc(String choc) {
         Choc = choc;
     }
 
@@ -109,11 +109,11 @@ public class Seisme {
         Longitude = longitude;
     }
 
-    public int getIntensite() {
+    public Float getIntensite() {
         return Intensite;
     }
 
-    public void setIntensite(int intensite) {
+    public void setIntensite(Float intensite) {
         Intensite = intensite;
     }
 
