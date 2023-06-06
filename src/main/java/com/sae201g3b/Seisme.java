@@ -1,6 +1,7 @@
 package com.sae201g3b;
 
 public class Seisme {
+    //Classe : tout les attributs présent dans les données
     private Float Identifiant;
     private String Date;
     private String Heure;
@@ -15,6 +16,7 @@ public class Seisme {
     private String Qualite;
 
     public Seisme(Float identifiant, String date, String heure, String nom, String région, String choc, Float x, Float y, Float latitude, Float longitude, Float intensite, String qualite) {
+        //Constructeur
         Identifiant = identifiant;
         Date = date;
         Heure = heure;
@@ -29,6 +31,7 @@ public class Seisme {
         Qualite = qualite;
     }
 
+    //setter et getter pour chaque attribut
     public Float getIdentifiant() {
         return Identifiant;
     }
@@ -127,6 +130,8 @@ public class Seisme {
 
     @Override
     public String toString() {
+        //Out : String
+        //Permet d'afficher dans la console les données de notre object
         return "Seisme{" +
                 "Identifiant=" + Identifiant +
                 ", Date='" + Date + '\'' +
