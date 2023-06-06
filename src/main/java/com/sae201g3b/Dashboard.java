@@ -7,12 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SisMapApplication extends Application {
+public class Dashboard extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SisMapApplication.class.getResource("Dashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("SisMapApplication");
+        stage.setTitle("Dashboard");
         stage.setScene(scene);
         stage.show();
     }

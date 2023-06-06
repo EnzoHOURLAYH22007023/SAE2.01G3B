@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="373.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.Dashboard">
+
+
+
+<HBox>
+
+
+
+
+
+
+
+</HBox>
+
+
+
+
+
+
+
+
+
+
+
+</AnchorPane>
