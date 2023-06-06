@@ -23,6 +23,7 @@
                <ToolBar prefHeight="40.0" prefWidth="200.0">
                  <items>
                    <Button mnemonicParsing="false" text="nvig" />
+                     <ToggleButton mnemonicParsing="false" text="ToggleButton" />
                  </items>
                </ToolBar>
              <Button mnemonicParsing="false" text="J/n" />
@@ -30,6 +31,17 @@
          </ToolBar>
       </children>
    </VBox>
+   <TableView layoutX="14.0" layoutY="62.0" prefHeight="200.0" prefWidth="200.0">
+     <columns>
+       <TableColumn prefWidth="75.0" text="C1" />
+       <TableColumn prefWidth="75.0" text="C2" />
+     </columns>
+   </TableView>
+   <TextArea layoutX="236.0" layoutY="62.0" prefHeight="200.0" prefWidth="200.0" />
+   <TextField layoutX="236.0" layoutY="75.0" />
+   <TextField layoutX="236.0" layoutY="120.0" />
+   <TextField layoutX="236.0" layoutY="163.0" />
+   <TextField layoutX="236.0" layoutY="207.0" />
 
 
 

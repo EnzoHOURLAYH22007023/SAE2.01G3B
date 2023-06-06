@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="initialisation du FXML le départ pour le dashboard">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/Dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +99,7 @@
       <updated>1685957103851</updated>
       <workItem from="1685957105041" duration="623000" />
       <workItem from="1685972701423" duration="1743000" />
-      <workItem from="1686043007866" duration="2104000" />
+      <workItem from="1686043007866" duration="2344000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1685957126715</created>
@@ -130,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686044733096</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="initialisation n°1 du FXML ( Ajout 2 boutons dans le top)">
+      <created>1686045159613</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686045159613</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +147,7 @@
     <MESSAGE value="ajout : lien comment faire des bons commits" />
     <MESSAGE value="initialisation : application basique" />
     <MESSAGE value="initialisation du FXML le départ pour le dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialisation du FXML le départ pour le dashboard" />
+    <MESSAGE value="initialisation n°1 du FXML ( Ajout 2 boutons dans le top)" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialisation n°1 du FXML ( Ajout 2 boutons dans le top)" />
   </component>
 </project>
