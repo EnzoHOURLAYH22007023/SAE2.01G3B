@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.Menu?>
-<?import com.gluonhq.impl.maps.BaseMap?>
-<?import com.gluonhq.maps.MapView?>
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.sae201g3b.SisMapController">
+<?import com.gluonhq.maps.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane HBox.hgrow="ALWAYS" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="com.sae201g3b.SisMapController">
     <top>
         <MenuBar>
-            <Menu text="Carte"/>
-            <Menu text="Dashboard"/>
+            <Menu text="Carte" />
+            <Menu text="Dashboard" />
         </MenuBar>
     </top>
     <center>
-        <MapView fx:id="map">
-
-        </MapView>
+        <HBox BorderPane.alignment="CENTER">
+            <MapView fx:id="france" />
+        </HBox>
     </center>
+    <right>
+        <TextField text="VOILA"/>
+    </right>
 </BorderPane>
-
