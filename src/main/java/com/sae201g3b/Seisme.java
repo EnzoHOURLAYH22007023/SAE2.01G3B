@@ -1,7 +1,7 @@
 package com.sae201g3b;
 
 public class Seisme {
-    //Classe : tout les attributs présent dans les données
+    //Classe : tous les attributs présents dans les données
     private Float Identifiant;
     private String Date;
     private String Heure;
