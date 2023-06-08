@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="ajout : Commentaire dans le bon format pour ImportationCSV.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686230746376</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ajout : Commentaire dans le bon format pour ImportationCSV.java">
+      <created>1686239510262</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686239510262</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +214,7 @@
     <MESSAGE value="ajout : commentaire" />
     <MESSAGE value="ajout : mise en place des filtre (premièrement avec les région)" />
     <MESSAGE value="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment" />
+    <MESSAGE value="ajout : Commentaire dans le bon format pour ImportationCSV.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout : Commentaire dans le bon format pour ImportationCSV.java" />
   </component>
 </project>

@@ -1,5 +1,5 @@
 /**
- * ImportationCSV permet l'importation d'un .csv dans un ArrayList
+ * ImportationCSV permet l'importation d'un .csv dans un ArrayList et ensuite son filtrage selon ce que donne l'utilisateur
  *
  * @version 1.0
  *
