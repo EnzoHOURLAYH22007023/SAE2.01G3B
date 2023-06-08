@@ -24,18 +24,18 @@
     <center>
         <TableView fx:id="tableau">
             <columns>
-                <TableColumn fx:id="Identifiant" prefWidth="75.0" text="Identifiant" />
-                <TableColumn fx:id="Date" prefWidth="75.0" text="Date" />
-                <TableColumn fx:id="Heure" prefWidth="75.0" text="Heure" />
-                <TableColumn fx:id="Nom" prefWidth="75.0" text="Nom" />
-                <TableColumn fx:id="Region" prefWidth="75.0" text="Region" />
-                <TableColumn fx:id="Choc" prefWidth="75.0" text="Choc" />
-                <TableColumn fx:id="X" prefWidth="75.0" text="X" />
-                <TableColumn fx:id="Y" prefWidth="75.0" text="Y" />
-                <TableColumn fx:id="Latitude" prefWidth="75.0" text="Latitude" />
-                <TableColumn fx:id="Longitude" prefWidth="75.0" text="Longitude" />
-                <TableColumn fx:id="Intensite" prefWidth="75.0" text="Intensité" />
-                <TableColumn fx:id="Qualite" prefWidth="75.0" text="Qualité" />
+                <TableColumn fx:id="Identifiant" text="Identifiant" />
+                <TableColumn fx:id="Date" text="Date" />
+                <TableColumn fx:id="Heure" text="Heure" />
+                <TableColumn fx:id="Nom" text="Nom" />
+                <TableColumn fx:id="Region" text="Region" />
+                <TableColumn fx:id="Choc" text="Choc" />
+                <TableColumn fx:id="X" text="X" />
+                <TableColumn fx:id="Y" text="Y" />
+                <TableColumn fx:id="Latitude" text="Latitude" />
+                <TableColumn fx:id="Longitude" text="Longitude" />
+                <TableColumn fx:id="Intensite" text="Intensité" />
+                <TableColumn fx:id="Qualite" text="Qualité" />
             </columns>
         </TableView>
         <MapView fx:id="france" />

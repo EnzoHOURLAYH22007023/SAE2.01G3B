@@ -63,7 +63,7 @@ public class SisMapController {
         tableau.setItems(listeSeisme);
 
         for(Seisme seisme: CSV){
-            MapLayer layer = new CustomCircleMarkerLayer(new MapPoint(seisme.getLatitude(),seisme.getLongitude()));
+            MapLayer layer = new CustomCircleMarkerLayer(new MapPoint(seisme.getLatitude(),seisme.getLongitude()),seisme.getIntensite());
             france.addLayer(layer);
         }
 

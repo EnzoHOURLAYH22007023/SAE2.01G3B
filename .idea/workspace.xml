@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="feat : affiche les données dans le tableau">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/CustomCircleMarkerLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/CustomCircleMarkerLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +102,7 @@
   <component name="RunManager">
     <configuration name="SisMap" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.sae201g3b.SisMapApplication" />
-      <module name="SAE2.01G3B" />
+      <module name="SAE201G3B" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -188,6 +190,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
