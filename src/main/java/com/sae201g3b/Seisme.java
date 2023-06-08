@@ -1,7 +1,19 @@
 package com.sae201g3b;
 
+/**
+ * Seisme permet la reconstruction et la manipulation des seismes contenue dans le .csv et que l'on recupère
+ * Dans notre récupération nous lisons ligne par ligne le .csv les donnees sont alors sans aucune reference
+ * Cette class permet de retrouver cette coherence des donnees
+ *
+ * @version 1.0
+ *
+ * @see ImportationCSV#ImportCSV()
+ * @author Alexandre Crespin
+ */
+
+
 public class Seisme {
-    //Classe : tous les attributs présents dans les données
+    /*Tout les attributs que l'on retrouve dans le .csv sauf pour X et Y qui ne sont pas utile pour nous*/
     private String Identifiant;
     private String Date;
     private String Heure;
@@ -14,7 +26,10 @@ public class Seisme {
     private String Qualite;
 
     public Seisme(String identifiant, String date, String heure, String nom, String region, String choc, String latitude, String longitude, String intensite, String qualite) {
-        //Constructeur
+        /**
+         * Constructeur de la classe Seisme
+         *
+         */
         Identifiant = identifiant;
         Date = date;
         Heure = heure;
@@ -27,7 +42,12 @@ public class Seisme {
         Qualite = qualite;
     }
 
-    //setter et getter pour chaque attribut
+    /**
+     * Getters des attributs de la classe Seisme
+     *
+     * @return      attributs
+     *
+     */
     public String getIdentifiant() {
         return Identifiant;
     }
@@ -70,9 +90,12 @@ public class Seisme {
 
     @Override
     public String toString() {
-        //In : void
-        //Out : String
-        //Permet d'afficher dans la console les données de notre object
+        /**
+         * toString permet de visualise dans la console les résultats obtenue
+         *
+         * @return      String
+         *
+         */
         return "Seisme{" +
                 "Identifiant=" + Identifiant +
                 ", Date='" + Date + '\'' +
