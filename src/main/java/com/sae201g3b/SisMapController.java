@@ -1,13 +1,23 @@
 package com.sae201g3b;
 
 import com.gluonhq.maps.MapLayer;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.BorderPane;
 
 public class SisMapController {
     @FXML
+    private BorderPane borderPane;
+    @FXML
     private MapView france;
+    @FXML
+    private TableView tableau;
+    @FXML
+    private Button btnCarte,btnTab;
     private CustomCircleMarkerLayer pointLayer;
     public void initialize(){
         System.setProperty("javafx.platform", "desktop");
@@ -23,4 +33,13 @@ public class SisMapController {
         pointLayer = new CustomCircleMarkerLayer(francePoint);
         france.addLayer(pointLayer);
     }
+
+    public void changeCenter(ActionEvent event){
+        if(event.getSource()==btnCarte){
+            borderPane.setCenter(france);
+        } else if (event.getSource()==btnTab){
+            borderPane.setCenter(tableau);
+        }
+    }
+
  }

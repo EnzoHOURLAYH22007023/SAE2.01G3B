@@ -4,17 +4,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane HBox.hgrow="ALWAYS" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="com.sae201g3b.SisMapController">
+<BorderPane fx:id="borderPane" HBox.hgrow="ALWAYS" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal" fx:controller="com.sae201g3b.SisMapController">
     <top>
         <MenuBar>
+            <Menu text="Fichier">
+                <MenuItem text="Importer CSV"/>
+            </Menu>
             <Menu text="Carte" />
             <Menu text="Dashboard" />
+            <Menu text="A propos.."/>
         </MenuBar>
     </top>
+    <left>
+        <VBox>
+            <Button fx:id="btnCarte" text="Carte" onAction="#changeCenter"/>
+            <Button fx:id="btnTab" text="Tableau" onAction="#changeCenter"/>
+        </VBox>
+    </left>
     <center>
-        <HBox BorderPane.alignment="CENTER">
-            <MapView fx:id="france" />
-        </HBox>
+        <TableView fx:id="tableau">
+            <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+            </columns>
+        </TableView>
+        <MapView fx:id="france" />
     </center>
     <right>
         <TextField text="VOILA"/>
