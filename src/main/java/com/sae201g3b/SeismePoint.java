@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 /** Affiche un point rouge sur la carte */
-public class CustomCircleMarkerLayer extends MapLayer {
+public class SeismePoint extends MapLayer {
 
  private final MapPoint mapPoint;
  private final Circle circle;
@@ -16,7 +16,7 @@ public class CustomCircleMarkerLayer extends MapLayer {
   * @param mapPoint le point (latitude et longitude) où afficher le cercle
   * @see com.gluonhq.maps.MapPoint
   */
- public CustomCircleMarkerLayer(MapPoint mapPoint,float intensite) {
+ public SeismePoint(MapPoint mapPoint, float intensite) {
   this.mapPoint = mapPoint;
   /* Cercle rouge de taille 5 vert jaune orange rouge*/
   if(intensite <= 3 ){
@@ -39,7 +39,6 @@ public class CustomCircleMarkerLayer extends MapLayer {
  protected void layoutLayer() {
   /* Conversion du MapPoint vers Point2D */
   Point2D point2d = this.getMapPoint(mapPoint.getLatitude(), mapPoint.getLongitude());
-
   /* Déplace le cercle selon les coordonnées du point */
   circle.setTranslateX(point2d.getX());
   circle.setTranslateY(point2d.getY());

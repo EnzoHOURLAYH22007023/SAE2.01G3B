@@ -1,5 +1,5 @@
 /**
- * ImportationCSV permet l'importation d'un .csv dans un ArrayList et ensuite son filtrage selon ce que donne l'utilisateur
+ * Database permet l'importation d'un .csv dans un ArrayList et ensuite son filtrage selon ce que donne l'utilisateur
  *
  * @version 1.0
  *
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Objects;
 
-public class ImportationCSV {
+public class Database {
     //Un ArrayList qui permet de stocker toutes les données du CSV
     private static ArrayList<Seisme> data;
 
@@ -23,7 +23,7 @@ public class ImportationCSV {
     private static ArrayList<Seisme> dataFiltrer;
 
     //------------PARTIE IMPORTATION DES DATA--------------
-    public ImportationCSV(){
+    public Database(){
         data = new ArrayList<>();
         dataFiltrer = data;
     }

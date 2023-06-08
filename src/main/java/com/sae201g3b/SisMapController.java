@@ -63,22 +63,14 @@ public class SisMapController {
         Choc.setCellValueFactory(new PropertyValueFactory<>("choc"));
         Qualite.setCellValueFactory(new PropertyValueFactory<>("qualite"));
 
-        ImportationCSV CSV = new ImportationCSV();
+
+        Database CSV = new Database();
         CSV.ImportCSV();
-        CSV.filtrer("\"PYRENEES OCCIDENTALES\"","","Region");
         List<Seisme> data = CSV.getDataFiltrer();
         ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(data);
         tableau.setItems(listeSeisme);
 
-        for(Seisme seisme: data){
-            try {
-                MapLayer layer = new CustomCircleMarkerLayer(new MapPoint(Float.parseFloat(seisme.getLatitude()), Float.parseFloat(seisme.getLongitude())), Float.parseFloat(seisme.getIntensite()));
-                mapLayerArrayList.add(layer);
-                france.addLayer(layer);
-            } catch (IllegalArgumentException e){
-                System.out.println("ERROR");
-            }
-        }
+        afficheSeismeCarte(data);
 
     }
 
@@ -90,10 +82,25 @@ public class SisMapController {
         }
     }
 
+    public void afficheSeismeCarte(List<Seisme> data){
+        for(Seisme seisme: data){
+            try {
+                MapLayer layer = new SeismePoint(new MapPoint(Float.parseFloat(seisme.getLatitude()),
+                                                                          Float.parseFloat(seisme.getLongitude())),
+                                                             Float.parseFloat(seisme.getIntensite()));
+                mapLayerArrayList.add(layer);
+                france.addLayer(layer);
+            } catch (IllegalArgumentException e){
+                System.out.println("ERROR");
+            }
+        }
+    }
+
     public void reset(){
         for(MapLayer layer : mapLayerArrayList){
             france.removeLayer(layer);
         }
+        mapLayerArrayList = new ArrayList<>();
     }
 
  }
