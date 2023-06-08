@@ -42,5 +42,6 @@
     </center>
     <right>
         <TextField text="VOILA"/>
+        <Button text="reset" onAction="#reset"/>
     </right>
 </BorderPane>

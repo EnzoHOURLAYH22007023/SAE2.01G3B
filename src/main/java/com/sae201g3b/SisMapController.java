@@ -21,6 +21,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SisMapController {
@@ -36,15 +37,19 @@ public class SisMapController {
     private TableColumn<Seisme,Float> Identifiant,X,Y,Latitude,Longitude,Intensite;
     @FXML
     private TableColumn<Seisme,String> Date,Heure,Nom,Region,Choc,Qualite;
+    private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
     public void initialize(){
+        /* Ligne nécessaire pour empêcher des erreur sur la map Gluon */
         System.setProperty("javafx.platform", "desktop");
         System.setProperty("http.agent", "Gluon Mobile/1.0.3");
 
+        /* Initialisation de la map sur la France */
         MapPoint francePoint = new MapPoint(46.227638, 2.213749);
         france.setZoom(6);
         france.flyTo(0,francePoint,0.1);
         //france.setDisable(true);
 
+        /* Initialisation de la TableView qui affiche les données des séismes */
         Identifiant.setCellValueFactory(new PropertyValueFactory<>("Identifiant"));
         X.setCellValueFactory(new PropertyValueFactory<>("X"));
         Y.setCellValueFactory(new PropertyValueFactory<>("Y"));
@@ -64,6 +69,7 @@ public class SisMapController {
 
         for(Seisme seisme: CSV){
             MapLayer layer = new CustomCircleMarkerLayer(new MapPoint(seisme.getLatitude(),seisme.getLongitude()),seisme.getIntensite());
+            mapLayerArrayList.add(layer);
             france.addLayer(layer);
         }
 
@@ -77,6 +83,12 @@ public class SisMapController {
             borderPane.setCenter(france);
         } else if (event.getSource()==btnTab){
             borderPane.setCenter(tableau);
+        }
+    }
+
+    public void reset(){
+        for(MapLayer layer : mapLayerArrayList){
+            france.removeLayer(layer);
         }
     }
 
