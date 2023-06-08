@@ -39,7 +39,7 @@ public class SisMapController {
     private TableColumn<Seisme,String> Date,Heure,Nom,Region,Choc,Qualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
     public void initialize(){
-        /* Ligne nécessaire pour empêcher des erreur sur la map Gluon */
+        /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
         System.setProperty("javafx.platform", "desktop");
         System.setProperty("http.agent", "Gluon Mobile/1.0.3");
 
@@ -63,19 +63,23 @@ public class SisMapController {
         Choc.setCellValueFactory(new PropertyValueFactory<>("choc"));
         Qualite.setCellValueFactory(new PropertyValueFactory<>("qualite"));
 
-        List<Seisme> CSV = ImportationCSV.ImportCSV();
-        ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(CSV);
+        ImportationCSV CSV = new ImportationCSV();
+        CSV.ImportCSV();
+        CSV.filtrer("\"PYRENEES OCCIDENTALES\"","","Region");
+        List<Seisme> data = CSV.getDataFiltrer();
+        ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(data);
         tableau.setItems(listeSeisme);
 
-        for(Seisme seisme: CSV){
-            MapLayer layer = new CustomCircleMarkerLayer(new MapPoint(seisme.getLatitude(),seisme.getLongitude()),seisme.getIntensite());
-            mapLayerArrayList.add(layer);
-            france.addLayer(layer);
+        for(Seisme seisme: data){
+            try {
+                MapLayer layer = new CustomCircleMarkerLayer(new MapPoint(Float.parseFloat(seisme.getLatitude()), Float.parseFloat(seisme.getLongitude())), Float.parseFloat(seisme.getIntensite()));
+                mapLayerArrayList.add(layer);
+                france.addLayer(layer);
+            } catch (IllegalArgumentException e){
+                System.out.println("ERROR");
+            }
         }
 
-        /*String filtre = "\"PYRENEES OCCIDENTALES\"";
-        listeSeisme = FXCollections.observableArrayList(Filtre.filtrer(filtre));
-        tableau.setItems(listeSeisme);*/
     }
 
     public void changeCenter(ActionEvent event){

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="ajout : mise en place des filtre (premièrement avec les région)">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="feat : Couleur des points change celon l'intensité du seisme">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Filtre.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -100,9 +100,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="SisMap" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.sae201g3b.SisMapApplication" />
-      <module name="SAE201G3B" />
+      <module name="SAE2.01G3B" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,18 +178,36 @@
       <option name="project" value="LOCAL" />
       <updated>1686053183956</updated>
     </task>
-    <task id="LOCAL-00009" summary="ajout : mise en place des filtre (premièrement avec les région)">
-      <created>1686209166732</created>
+    <task id="LOCAL-00009" summary="feat : affiche les données dans le tableau">
+      <created>1686214685315</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1686209166732</updated>
+      <updated>1686214685315</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat : Couleur des points change celon l'intensité du seisme">
+      <created>1686229412360</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686229412360</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
@@ -201,6 +219,8 @@
     <MESSAGE value="ajout : CSV dans Array" />
     <MESSAGE value="ajout : commentaire" />
     <MESSAGE value="ajout : mise en place des filtre (premièrement avec les région)" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout : mise en place des filtre (premièrement avec les région)" />
+    <MESSAGE value="feat : affiche les données dans le tableau" />
+    <MESSAGE value="feat : Couleur des points change celon l'intensité du seisme" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : Couleur des points change celon l'intensité du seisme" />
   </component>
 </project>
