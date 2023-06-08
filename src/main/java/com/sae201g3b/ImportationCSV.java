@@ -12,7 +12,7 @@ public class ImportationCSV {
         CSV = new ArrayList<>();
 
         //On donne le chemin vers le fichier
-        String cheminFichier = "C:/Users/kunai/IdeaProjects/SAE2.01G3B/src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
+        String cheminFichier = "C:\\Users\\Massko\\Desktop\\Enzo PC\\GitHub\\SAE2.01G3B/src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(cheminFichier))) {
             String ligne;

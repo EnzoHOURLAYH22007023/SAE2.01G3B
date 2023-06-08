@@ -24,8 +24,18 @@
     <center>
         <TableView fx:id="tableau">
             <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="Identifiant" prefWidth="75.0" text="Identifiant" />
+                <TableColumn fx:id="Date" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="Heure" prefWidth="75.0" text="Heure" />
+                <TableColumn fx:id="Nom" prefWidth="75.0" text="Nom" />
+                <TableColumn fx:id="Region" prefWidth="75.0" text="Region" />
+                <TableColumn fx:id="Choc" prefWidth="75.0" text="Choc" />
+                <TableColumn fx:id="X" prefWidth="75.0" text="X" />
+                <TableColumn fx:id="Y" prefWidth="75.0" text="Y" />
+                <TableColumn fx:id="Latitude" prefWidth="75.0" text="Latitude" />
+                <TableColumn fx:id="Longitude" prefWidth="75.0" text="Longitude" />
+                <TableColumn fx:id="Intensite" prefWidth="75.0" text="Intensité" />
+                <TableColumn fx:id="Qualite" prefWidth="75.0" text="Qualité" />
             </columns>
         </TableView>
         <MapView fx:id="france" />
