@@ -1,3 +1,14 @@
+/*
+ * Nom de classe : SisMapController
+ *
+ * Description   : Controller du menu principal SisMapView.fxml
+ *
+ * Version       : 1.0
+ *
+ * Date          : 08/06/2023
+ *
+ * Author        : Alexandre Crespin,Enzo HOURLAY, Sabri KHADRAOUI, Yazid-Raoul Maoulida Attoumani
+ */
 package com.sae201g3b;
 
 import javafx.application.Application;
