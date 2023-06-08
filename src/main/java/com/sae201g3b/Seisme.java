@@ -8,14 +8,12 @@ public class Seisme {
     private String Nom;
     private String Region;
     private String Choc;
-    private String X;
-    private String Y;
     private String Latitude;
     private String Longitude;
     private String Intensite;
     private String Qualite;
 
-    public Seisme(String identifiant, String date, String heure, String nom, String region, String choc, String x, String y, String latitude, String longitude, String intensite, String qualite) {
+    public Seisme(String identifiant, String date, String heure, String nom, String region, String choc, String latitude, String longitude, String intensite, String qualite) {
         //Constructeur
         Identifiant = identifiant;
         Date = date;
@@ -23,8 +21,6 @@ public class Seisme {
         Nom = nom;
         Region = region;
         Choc = choc;
-        X = x;
-        Y = y;
         Latitude = latitude;
         Longitude = longitude;
         Intensite = intensite;
@@ -56,14 +52,6 @@ public class Seisme {
         return Choc;
     }
 
-    public String getX() {
-        return X;
-    }
-
-    public String getY() {
-        return Y;
-    }
-
     public String getLatitude() {
         return Latitude;
     }
@@ -92,8 +80,6 @@ public class Seisme {
                 ", Nom='" + Nom + '\'' +
                 ", Région='" + Region + '\'' +
                 ", Choc=" + Choc +
-                ", X=" + X +
-                ", Y=" + Y +
                 ", Latitude=" + Latitude +
                 ", Longitude=" + Longitude +
                 ", Intensite=" + Intensite +
