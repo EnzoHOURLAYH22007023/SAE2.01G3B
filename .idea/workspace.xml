@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="ajout : mise en place des filtre (premièrement avec les région)">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Filtre.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686209166732</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment">
+      <created>1686230746376</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686230746376</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +205,7 @@
     <MESSAGE value="ajout : CSV dans Array" />
     <MESSAGE value="ajout : commentaire" />
     <MESSAGE value="ajout : mise en place des filtre (premièrement avec les région)" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout : mise en place des filtre (premièrement avec les région)" />
+    <MESSAGE value="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment" />
   </component>
 </project>
