@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="ajout : mise en place des filtre (premièrement avec les région)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Filtre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Filtre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportationCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +99,15 @@
       <recent name="com.sae201g3b" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sae201g3b.SisMapApplication" />
+      <module name="SAE201G3B" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -169,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686053183956</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ajout : mise en place des filtre (premièrement avec les région)">
+      <created>1686209166732</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686209166732</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

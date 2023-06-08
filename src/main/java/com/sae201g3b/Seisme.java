@@ -2,20 +2,20 @@ package com.sae201g3b;
 
 public class Seisme {
     //Classe : tous les attributs présents dans les données
-    private Float Identifiant;
+    private String Identifiant;
     private String Date;
     private String Heure;
     private String Nom;
     private String Region;
     private String Choc;
-    private Float X;
-    private Float Y;
-    private Float Latitude;
-    private Float Longitude;
-    private Float Intensite;
+    private String X;
+    private String Y;
+    private String Latitude;
+    private String Longitude;
+    private String Intensite;
     private String Qualite;
 
-    public Seisme(Float identifiant, String date, String heure, String nom, String region, String choc, Float x, Float y, Float latitude, Float longitude, Float intensite, String qualite) {
+    public Seisme(String identifiant, String date, String heure, String nom, String region, String choc, String x, String y, String latitude, String longitude, String intensite, String qualite) {
         //Constructeur
         Identifiant = identifiant;
         Date = date;
@@ -32,100 +32,52 @@ public class Seisme {
     }
 
     //setter et getter pour chaque attribut
-    public Float getIdentifiant() {
+    public String getIdentifiant() {
         return Identifiant;
-    }
-
-    public void setIdentifiant(Float identifiant) {
-        Identifiant = identifiant;
     }
 
     public String getDate() {
         return Date;
     }
 
-    public void setDate(String date) {
-        Date = date;
-    }
-
     public String getHeure() {
         return Heure;
-    }
-
-    public void setHeure(String heure) {
-        Heure = heure;
     }
 
     public String getNom() {
         return Nom;
     }
 
-    public void setNom(String nom) {
-        Nom = nom;
-    }
-
     public String getRegion() {
         return Region;
-    }
-
-    public void setRegion(String region) {
-        Region = region;
     }
 
     public String getChoc() {
         return Choc;
     }
 
-    public void setChoc(String choc) {
-        Choc = choc;
-    }
-
-    public Float getX() {
+    public String getX() {
         return X;
     }
 
-    public void setX(Float x) {
-        X = x;
-    }
-
-    public Float getY() {
+    public String getY() {
         return Y;
     }
 
-    public void setY(Float y) {
-        Y = y;
-    }
-
-    public Float getLatitude() {
+    public String getLatitude() {
         return Latitude;
     }
 
-    public void setLatitude(Float latitude) {
-        Latitude = latitude;
-    }
-
-    public Float getLongitude() {
+    public String getLongitude() {
         return Longitude;
     }
 
-    public void setLongitude(Float longitude) {
-        Longitude = longitude;
-    }
-
-    public Float getIntensite() {
+    public String getIntensite() {
         return Intensite;
-    }
-
-    public void setIntensite(Float intensite) {
-        Intensite = intensite;
     }
 
     public String getQualite() {
         return Qualite;
-    }
-
-    public void setQualite(String qualite) {
-        Qualite = qualite;
     }
 
     @Override

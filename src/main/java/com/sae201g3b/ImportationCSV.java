@@ -41,30 +41,21 @@ public class ImportationCSV {
         //In : String[] valeurs
         //Out : Seisme
         //Permet de recréer les séismes après avoir récupéré les données
-        Float Identifiant = parseFloatOrDefault(valeurs[0]);
+        String Identifiant = valeurs[0];
         String Date = valeurs[1];
         String Heure = valeurs[2];
         String Nom = valeurs[3];
         String Region = valeurs[4];
         String Choc = valeurs[5];
-        Float X = parseFloatOrDefault(valeurs[6]);
-        Float Y = parseFloatOrDefault(valeurs[7]);
-        Float Latitude = parseFloatOrDefault(valeurs[8]);
-        Float Longitude = parseFloatOrDefault(valeurs[9]);
-        Float Intensite = parseFloatOrDefault(valeurs[10]);
+        String X = valeurs[6];
+        String Y = valeurs[7];
+        String Latitude = valeurs[8];
+        String Longitude = valeurs[9];
+        String Intensite = valeurs[10];
         String Qualite = valeurs[11];
         return new Seisme(Identifiant,Date,Heure,Nom,Region,Choc,X,Y,Latitude,Longitude,Intensite,Qualite);
     }
-    private static Float parseFloatOrDefault(String valeur) {
-        //In : String value
-        //Out : Float
-        //Permet de mettre des valeurs par default s'il n'y en a pas dans les données
-        try {
-            return Float.parseFloat(valeur);
-        } catch (NumberFormatException e) {
-            return 0.0f;
-        }
-    }
+
     private void getSeisme(Seisme seisme){
         //In : Seisme seisme
         //Out : void
