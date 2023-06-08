@@ -19,11 +19,21 @@ public class ImportationCSV {
     //Un ArrayList qui permet de stocker toutes les données du CSV
     private static ArrayList<Seisme> data;
 
-    //Un ArrayList copie de data permettant d'effectuer des modification sans changer notre csv de base
-    private static ArrayList<Seisme> dataFiltrer = data;
+    //Un ArrayList copie de data permettant d'effectuer de la modification sans changer notre csv de base
+    private static ArrayList<Seisme> dataFiltrer;
 
     //------------PARTIE IMPORTATION DES DATA--------------
-    public static ArrayList<Seisme> ImportCSV() {
+    public ImportationCSV(){
+        data = new ArrayList<>();
+        dataFiltrer = data;
+    }
+    public static ArrayList<Seisme> getData() {
+        return dataFiltrer;
+    }
+    public static ArrayList<Seisme> getDataFiltrer() {
+        return dataFiltrer;
+    }
+    public static void ImportCSV() {
         /**
          * ImportCSV permet l'importation du .csv
          *
@@ -31,10 +41,8 @@ public class ImportationCSV {
          *
          * @see         Seisme
          */
-        data = new ArrayList<>();
-
         /*On donne le chemin vers le fichier (A modif selon Window ou Linux)*/
-        String cheminFichier = "C:/Users/kunai/IdeaProjects/SAE2.01G3B/src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
+        String cheminFichier = "C:\\Users\\Massko\\Desktop\\Enzo PC\\GitHub\\SAE2.01G3B/src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(cheminFichier))) {
             String ligne;
@@ -51,7 +59,7 @@ public class ImportationCSV {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return data;
+        dataFiltrer=data;
     }
 
     private static Seisme createSeisme(String[] valeurs) {
@@ -62,7 +70,6 @@ public class ImportationCSV {
          *
          * @see         Seisme
          */
-
         /*Permet de recupérer les valeurs depuis l'ArrayList sauf X et Y qui ne sont pas utile*/
         String Identifiant = valeurs[0];
         String Date = valeurs[1];
@@ -79,7 +86,7 @@ public class ImportationCSV {
     }
 
     //------------PARTIE FILTRE--------------
-    public static ArrayList<Seisme> filtrer(String filtre, String filtre2, String idfiltre){
+    public ArrayList<Seisme> filtrer(String filtre, String filtre2, String idfiltre){
         //IN : String filtre, String filtre2 (dans le cas d'une intervalle de date), String idfiltre
         //OUT : ArrayList<Seisme> dataFiltrer
 
