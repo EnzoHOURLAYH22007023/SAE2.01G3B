@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class ImportationCSV {
     //Un Array qui permet de stocker toutes les données du CSV
     private static ArrayList<Seisme> CSV;
-    public void ImmportCSV() {
+    public static ArrayList<Seisme> ImportCSV() {
         CSV = new ArrayList<>();
 
         //On donne le chemin vers le fichier
-        String cheminFichier = "/amuhome/c22008838/Bureau/JavaFX/SAE2.01G3B/src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
+        String cheminFichier = "C:/Users/kunai/IdeaProjects/SAE2.01G3B/src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(cheminFichier))) {
             String ligne;
@@ -30,13 +30,14 @@ public class ImportationCSV {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return CSV;
         //Pour affichage dans la console
         //for (Seisme seisme : CSV){
         //    System.out.println(seisme);
         //}
     }
 
-    private Seisme createSeisme(String[] valeurs) {
+    private static Seisme createSeisme(String[] valeurs) {
         //In : String[] valeurs
         //Out : Seisme
         //Permet de recréer les séismes après avoir récupéré les données
@@ -54,7 +55,7 @@ public class ImportationCSV {
         String Qualite = valeurs[11];
         return new Seisme(Identifiant,Date,Heure,Nom,Region,Choc,X,Y,Latitude,Longitude,Intensite,Qualite);
     }
-    private Float parseFloatOrDefault(String valeur) {
+    private static Float parseFloatOrDefault(String valeur) {
         //In : String value
         //Out : Float
         //Permet de mettre des valeurs par default s'il n'y en a pas dans les données
@@ -69,9 +70,5 @@ public class ImportationCSV {
         //Out : void
         //Permet d'afficher les données d'un séisme
         seisme.toString();
-    }
-
-    public static ArrayList<Seisme> getCSV() {
-        return CSV;
     }
 }
