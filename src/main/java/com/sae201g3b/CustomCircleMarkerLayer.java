@@ -2,12 +2,9 @@ package com.sae201g3b;
 
 import com.gluonhq.maps.MapLayer;
 import com.gluonhq.maps.MapPoint;
-
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-
-import java.util.ArrayList;
 
 /** Affiche un point rouge sur la carte */
 public class CustomCircleMarkerLayer extends MapLayer {

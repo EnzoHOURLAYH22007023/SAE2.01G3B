@@ -8,6 +8,7 @@
  */
 package com.sae201g3b;
 
+import com.gluonhq.maps.MapLayer;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
 import javafx.collections.FXCollections;
@@ -35,21 +36,14 @@ public class SisMapController {
     private TableColumn<Seisme,Float> Identifiant,X,Y,Latitude,Longitude,Intensite;
     @FXML
     private TableColumn<Seisme,String> Date,Heure,Nom,Region,Choc,Qualite;
-    private CustomCircleMarkerLayer pointLayer;
     public void initialize(){
         System.setProperty("javafx.platform", "desktop");
         System.setProperty("http.agent", "Gluon Mobile/1.0.3");
 
-
         MapPoint francePoint = new MapPoint(46.227638, 2.213749);
         france.setZoom(6);
         france.flyTo(0,francePoint,0.1);
-        france.setDisable(true);
-
-        pointLayer = new CustomCircleMarkerLayer(francePoint);
-        france.addLayer(pointLayer);
-
-
+        //france.setDisable(true);
 
         Identifiant.setCellValueFactory(new PropertyValueFactory<>("Identifiant"));
         X.setCellValueFactory(new PropertyValueFactory<>("X"));
@@ -67,6 +61,11 @@ public class SisMapController {
         List<Seisme> CSV = ImportationCSV.ImportCSV();
         ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(CSV);
         tableau.setItems(listeSeisme);
+
+        for(Seisme seisme: CSV){
+            MapLayer layer = new CustomCircleMarkerLayer(new MapPoint(seisme.getLatitude(),seisme.getLongitude()));
+            france.addLayer(layer);
+        }
 
         /*String filtre = "\"PYRENEES OCCIDENTALES\"";
         listeSeisme = FXCollections.observableArrayList(Filtre.filtrer(filtre));
