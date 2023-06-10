@@ -9,10 +9,14 @@
     <top>
         <MenuBar>
             <Menu text="Fichier">
+                <MenuItem text="Dashboard" onAction="#changerFXML"/>
+                <SeparatorMenuItem/>
                 <MenuItem text="Importer CSV" />
             </Menu>
-            <Menu text="Carte" onAction="#"/>
-            <Menu text="Dashboard" />
+            <Menu text="Edit">
+                <RadioMenuItem fx:id="menuCarte" text="Afficher la carte" onAction="#changeCenter" toggleGroup="Edit"/>
+                <RadioMenuItem fx:id="menuTab" text="Afficher le tableau" onAction="#changeCenter" toggleGroup=""/>
+            </Menu>
             <Menu text="A propos.." />
         </MenuBar>
     </top>
