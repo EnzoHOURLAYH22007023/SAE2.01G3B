@@ -40,9 +40,12 @@
     </center>
     <right>
         <VBox>
-            <TextField text="VOILA"/>
-            <Button text="filtrer" onAction="#reset"/>
-            <Button text="reset" onAction="#reset"/>
+            <Label text="De:"/>
+            <TextField promptText="Exp: JJ/MM/AAAA" />
+            <Label text="Jusqu'a:"/>
+            <TextField promptText="Exp: JJ/MM/AAAA" />
+            <Button text="Appliquer les changements"/>
+            <Button text="Réinitialiser" onAction="#reset"/>
         </VBox>
     </right>
 </BorderPane>
