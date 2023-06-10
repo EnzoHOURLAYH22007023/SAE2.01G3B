@@ -34,8 +34,6 @@ public class SisMapController {
     @FXML
     private TableView tableau;
     @FXML
-    private Button btnCarte,btnTab;
-    @FXML
     private RadioMenuItem menuCarte,menuTab;
     @FXML
     private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
@@ -73,9 +71,9 @@ public class SisMapController {
     }
 
     public void changeCenter(ActionEvent event){
-        if(event.getSource()==btnCarte || event.getSource()==menuCarte){
+        if(event.getSource()==menuCarte){
             borderPane.setCenter(france);
-        } else if (event.getSource()==btnTab || event.getSource()==menuTab){
+        } else if (event.getSource()==menuTab){
             borderPane.setCenter(tableau);
         }
     }

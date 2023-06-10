@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="feat : Ajout RadioMenuItem pour changer entre Carte et Tableau dans le menu principal">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="test : A propos...">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686436919356</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="test : A propos...">
+      <created>1686438400489</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1686438400489</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +278,8 @@
     <MESSAGE value="add : second fichier fxml pour tester de changer de menu" />
     <MESSAGE value="feat : changer entre SisMapView.fxml et DashboardView.fxml" />
     <MESSAGE value="feat : Ajout RadioMenuItem pour changer entre Carte et Tableau dans le menu principal" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : Ajout RadioMenuItem pour changer entre Carte et Tableau dans le menu principal" />
+    <MESSAGE value="test : A propos..." />
+    <option name="LAST_COMMIT_MESSAGE" value="test : A propos..." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
