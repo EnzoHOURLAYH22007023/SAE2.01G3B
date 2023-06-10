@@ -67,7 +67,7 @@ public class SisMapController {
         List<Seisme> data = CSV.getDataFiltrer();
         ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(data);
         tableau.setItems(listeSeisme);
-
+        reset();
         afficheSeismeCarte(data);
 
     }
@@ -81,7 +81,8 @@ public class SisMapController {
     }
 
     public void afficheSeismeCarte(List<Seisme> data){
-        for(Seisme seisme: data){
+        List<Seisme> dataTmp = data;
+        for(Seisme seisme: dataTmp){
             try {
                 MapLayer layer = new SeismePoint(new MapPoint(Float.parseFloat(seisme.getLatitude()),
                                                                           Float.parseFloat(seisme.getLongitude())),

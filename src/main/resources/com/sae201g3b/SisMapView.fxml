@@ -11,7 +11,7 @@
             <Menu text="Fichier">
                 <MenuItem text="Importer CSV" />
             </Menu>
-            <Menu text="Carte" onAction="#"/>
+            <!--<Menu text="Carte" onAction="#" />-->
             <Menu text="Dashboard" />
             <Menu text="A propos.." />
         </MenuBar>
@@ -51,7 +51,7 @@
             <Label text="Jusqu'a:" />
             <TextField promptText="Exp: JJ/MM/AAAA" />
             <Slider majorTickUnit="1.0" max="12.0" minorTickCount="1" orientation="VERTICAL" prefHeight="250.0" prefWidth="40.0" showTickLabels="true" showTickMarks="true" />
-            <Button text="Appliquer les changements" />
+            <Button text="Appliquer les changements" onAction="#initialize" />
             <Button onAction="#reset" text="Réinitialiser" />
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
