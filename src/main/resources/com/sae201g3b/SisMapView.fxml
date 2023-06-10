@@ -5,7 +5,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+
 <BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.SisMapController">
+    <fx:define>
+        <ToggleGroup fx:id="editGroup"/>
+    </fx:define>
     <top>
         <MenuBar>
             <Menu text="Fichier">
@@ -14,8 +18,8 @@
                 <MenuItem text="Importer CSV" />
             </Menu>
             <Menu text="Edit">
-                <RadioMenuItem fx:id="menuCarte" text="Afficher la carte" onAction="#changeCenter" toggleGroup="Edit"/>
-                <RadioMenuItem fx:id="menuTab" text="Afficher le tableau" onAction="#changeCenter" toggleGroup=""/>
+                <RadioMenuItem fx:id="menuCarte" text="Afficher la carte" onAction="#changeCenter" toggleGroup="$editGroup" selected="true"/>
+                <RadioMenuItem fx:id="menuTab" text="Afficher le tableau" onAction="#changeCenter" toggleGroup="$editGroup"/>
             </Menu>
             <Menu text="A propos.." />
         </MenuBar>

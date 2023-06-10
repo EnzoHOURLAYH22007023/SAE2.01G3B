@@ -17,10 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioMenuItem;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -41,9 +38,7 @@ public class SisMapController {
     @FXML
     private RadioMenuItem menuCarte,menuTab;
     @FXML
-    private TableColumn<Seisme,Float> colonneId,colonneLatitude,colonneLongitude,colonneIntensite;
-    @FXML
-    private TableColumn<Seisme,String> colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
+    private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
     public void initialize(){
         /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
@@ -68,7 +63,6 @@ public class SisMapController {
         colonneChoc.setCellValueFactory(new PropertyValueFactory<>("Choc"));
         colonneQualite.setCellValueFactory(new PropertyValueFactory<>("Qualite"));
 
-
         Database CSV = new Database();
         CSV.ImportCSV();
         List<Seisme> data = CSV.getDataFiltrer();
@@ -76,7 +70,6 @@ public class SisMapController {
         tableau.setItems(listeSeisme);
 
         afficheSeismeCarte(data);
-
     }
 
     public void changeCenter(ActionEvent event){
