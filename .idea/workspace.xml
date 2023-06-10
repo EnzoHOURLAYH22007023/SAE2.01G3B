@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="feat : changer entre SisMapView.fxml et DashboardView.fxml">
+    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="feat : Ajout RadioMenuItem pour changer entre Carte et Tableau dans le menu principal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686435888685</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat : Ajout RadioMenuItem pour changer entre Carte et Tableau dans le menu principal">
+      <created>1686436919355</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686436919356</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +270,8 @@
     <MESSAGE value="add : filtre de base" />
     <MESSAGE value="add : second fichier fxml pour tester de changer de menu" />
     <MESSAGE value="feat : changer entre SisMapView.fxml et DashboardView.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : changer entre SisMapView.fxml et DashboardView.fxml" />
+    <MESSAGE value="feat : Ajout RadioMenuItem pour changer entre Carte et Tableau dans le menu principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : Ajout RadioMenuItem pour changer entre Carte et Tableau dans le menu principal" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
