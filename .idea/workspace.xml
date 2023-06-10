@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="test : MapView">
+    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="add : filtre de base">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686246351864</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add : filtre de base">
+      <created>1686415115280</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686415115280</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +244,8 @@
     <MESSAGE value="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment" />
     <MESSAGE value="ajout : Commentaire dans le bon format pour ImportationCSV.java" />
     <MESSAGE value="ajout : Methode afficheSeismeCarte pour afficher les points sur la carte&#10;et refactor du nom de certaine classe" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout : Methode afficheSeismeCarte pour afficher les points sur la carte&#10;et refactor du nom de certaine classe" />
+    <MESSAGE value="add : filtre de base" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : filtre de base" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -34,9 +34,9 @@ public class SisMapController {
     @FXML
     private Button btnCarte,btnTab;
     @FXML
-    private TableColumn<Seisme,Float> Identifiant,X,Y,Latitude,Longitude,Intensite;
+    private TableColumn<Seisme,Float> colonneId,colonneLatitude,colonneLongitude,colonneIntensite;
     @FXML
-    private TableColumn<Seisme,String> Date,Heure,Nom,Region,Choc,Qualite;
+    private TableColumn<Seisme,String> colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
     public void initialize(){
         /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
@@ -50,16 +50,16 @@ public class SisMapController {
         //france.setDisable(true);
 
         /* Initialisation de la TableView qui affiche les données des séismes */
-        Identifiant.setCellValueFactory(new PropertyValueFactory<>("Identifiant"));
-        Latitude.setCellValueFactory(new PropertyValueFactory<>("Latitude"));
-        Longitude.setCellValueFactory(new PropertyValueFactory<>("Longitude"));
-        Intensite.setCellValueFactory(new PropertyValueFactory<>("Intensite"));
-        Date.setCellValueFactory(new PropertyValueFactory<>("date"));
-        Heure.setCellValueFactory(new PropertyValueFactory<>("heure"));
-        Nom.setCellValueFactory(new PropertyValueFactory<>("nom"));
-        Region.setCellValueFactory(new PropertyValueFactory<>("region"));
-        Choc.setCellValueFactory(new PropertyValueFactory<>("choc"));
-        Qualite.setCellValueFactory(new PropertyValueFactory<>("qualite"));
+        colonneId.setCellValueFactory(new PropertyValueFactory<>("Identifiant"));
+        colonneLatitude.setCellValueFactory(new PropertyValueFactory<>("Latitude"));
+        colonneLongitude.setCellValueFactory(new PropertyValueFactory<>("Longitude"));
+        colonneIntensite.setCellValueFactory(new PropertyValueFactory<>("Intensite"));
+        colonneDate.setCellValueFactory(new PropertyValueFactory<>("Date"));
+        colonneHeure.setCellValueFactory(new PropertyValueFactory<>("Heure"));
+        colonneNom.setCellValueFactory(new PropertyValueFactory<>("Nom"));
+        colonneRegion.setCellValueFactory(new PropertyValueFactory<>("Region"));
+        colonneChoc.setCellValueFactory(new PropertyValueFactory<>("Choc"));
+        colonneQualite.setCellValueFactory(new PropertyValueFactory<>("Qualite"));
 
 
         Database CSV = new Database();
@@ -89,7 +89,7 @@ public class SisMapController {
                 mapLayerArrayList.add(layer);
                 france.addLayer(layer);
             } catch (IllegalArgumentException e){
-                System.out.println("ERROR");
+                System.out.println("Lat,Lon ou Intensité est null");
             }
         }
     }
