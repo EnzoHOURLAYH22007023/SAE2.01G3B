@@ -30,8 +30,6 @@
                 <TableColumn fx:id="Nom" text="Nom" />
                 <TableColumn fx:id="Region" text="Region" />
                 <TableColumn fx:id="Choc" text="Choc" />
-                <TableColumn fx:id="X" text="X" />
-                <TableColumn fx:id="Y" text="Y" />
                 <TableColumn fx:id="Latitude" text="Latitude" />
                 <TableColumn fx:id="Longitude" text="Longitude" />
                 <TableColumn fx:id="Intensite" text="Intensité" />
@@ -41,8 +39,11 @@
         <MapView fx:id="france" />
     </center>
     <right>
-        <TextField text="VOILA"/>
-        <Button text="reset" onAction="#reset"/>
+        <VBox>
+            <TextField text="VOILA"/>
+            <Button text="filtrer" onAction="#reset"/>
+            <Button text="reset" onAction="#reset"/>
+        </VBox>
     </right>
 </BorderPane>
 

@@ -51,8 +51,6 @@ public class SisMapController {
 
         /* Initialisation de la TableView qui affiche les données des séismes */
         Identifiant.setCellValueFactory(new PropertyValueFactory<>("Identifiant"));
-        X.setCellValueFactory(new PropertyValueFactory<>("X"));
-        Y.setCellValueFactory(new PropertyValueFactory<>("Y"));
         Latitude.setCellValueFactory(new PropertyValueFactory<>("Latitude"));
         Longitude.setCellValueFactory(new PropertyValueFactory<>("Longitude"));
         Intensite.setCellValueFactory(new PropertyValueFactory<>("Intensite"));
