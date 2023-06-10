@@ -38,6 +38,7 @@ public class SisMapController {
     @FXML
     private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
+    private List<Seisme> data;
     public void initialize(){
         /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
         System.setProperty("javafx.platform", "desktop");
@@ -63,11 +64,11 @@ public class SisMapController {
 
         Database CSV = new Database();
         CSV.ImportCSV();
-        List<Seisme> data = CSV.getDataFiltrer();
+        data = CSV.getDataFiltrer();
         ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(data);
         tableau.setItems(listeSeisme);
-        reset();
-        afficheSeismeCarte(data);
+
+        afficheSeismeCarte();
     }
 
     public void changeCenter(ActionEvent event){
@@ -78,7 +79,7 @@ public class SisMapController {
         }
     }
 
-    public void afficheSeismeCarte(List<Seisme> data){
+    public void afficheSeismeCarte(){
         List<Seisme> dataTmp = data;
         for(Seisme seisme: dataTmp){
             try {
@@ -93,6 +94,7 @@ public class SisMapController {
         }
     }
 
+    @FXML
     public void reset(){
         for(MapLayer layer : mapLayerArrayList){
             france.removeLayer(layer);
