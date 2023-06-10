@@ -11,7 +11,7 @@
             <Menu text="Fichier">
                 <MenuItem text="Importer CSV" />
             </Menu>
-            <Menu text="Carte" />
+            <Menu text="Carte" onAction="#"/>
             <Menu text="Dashboard" />
             <Menu text="A propos.." />
         </MenuBar>
