@@ -5,8 +5,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<?import javafx.scene.text.TextFlow?>
 <BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.SisMapController">
     <fx:define>
         <ToggleGroup fx:id="editGroup"/>
@@ -23,7 +21,7 @@
                 <RadioMenuItem fx:id="menuTab" text="Afficher le tableau" onAction="#changeCenter" toggleGroup="$editGroup"/>
             </Menu>
             <Menu text="A propos..">
-                <MenuItem text="Autheur :">
+                <MenuItem text="Auteur :">
                 </MenuItem>
             </Menu>
         </MenuBar>
