@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="add : Fichier Css">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="fix : petit nettoyage" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686504472597</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix : petit nettoyage">
+      <created>1686504908064</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1686504908064</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +275,8 @@
     <MESSAGE value="feat : afficherSesmeCarte refresh la carte" />
     <MESSAGE value="fix : suppréssion des boutons carte et tableau remplacer par des MenuItem" />
     <MESSAGE value="add : Fichier Css" />
-    <option name="LAST_COMMIT_MESSAGE" value="add : Fichier Css" />
+    <MESSAGE value="fix : petit nettoyage" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : petit nettoyage" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
