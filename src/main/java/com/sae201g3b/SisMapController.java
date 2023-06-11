@@ -84,8 +84,8 @@ public class SisMapController {
         for(Seisme seisme: dataTmp){
             try {
                 MapLayer layer = new SeismePoint(new MapPoint(Float.parseFloat(seisme.getLatitude()),
-                                                                          Float.parseFloat(seisme.getLongitude())),
-                                                             Float.parseFloat(seisme.getIntensite()));
+                                                            Float.parseFloat(seisme.getLongitude())),
+                                                Float.parseFloat(seisme.getIntensite()));
                 mapLayerArrayList.add(layer);
                 france.addLayer(layer);
             } catch (IllegalArgumentException e){
