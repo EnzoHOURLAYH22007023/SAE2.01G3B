@@ -45,8 +45,8 @@
         <MapView fx:id="france"/>
     </center>
     <right>
-        <HBox>
-            <VBox styleClass="filtre">
+        <HBox spacing="10">
+            <VBox styleClass="vbox-filtre">
                 <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
                     <TextField promptText="Exp: 160001" GridPane.columnIndex="1"/>
                     <Label text="Id:"/>
@@ -57,11 +57,18 @@
                     <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
                     <Label text="Jusqu'a:" GridPane.rowIndex="3"/>
                     <Label text="De:" GridPane.rowIndex="2"/>
+                    <Button onAction="#afficheSeismeCarte" text="Appliquer les changements" GridPane.rowIndex="4"/>
+                    <Button onAction="#reset" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
                 </GridPane>
-                <Button onAction="#afficheSeismeCarte" text="Appliquer les changements" />
-                <Button onAction="#reset" text="Réinitialiser" />
+                <padding>
+                    <Insets topRightBottomLeft="10.0" />
+                </padding>
             </VBox>
-            <Slider majorTickUnit="1.0" max="12.0" maxHeight="720.0" maxWidth="50.0" minHeight="460.0" minWidth="50.0" minorTickCount="1" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" />
+            <Slider styleClass="slider" majorTickUnit="1.0" max="12.0" maxHeight="720.0" maxWidth="50.0" minHeight="460.0" minWidth="50.0" minorTickCount="1" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" >
+                <padding>
+                    <Insets topRightBottomLeft="10.0" />
+                </padding>
+            </Slider>
              <BorderPane.margin>
                 <Insets bottom="50.0" left="20.0" right="20.0" top="50.0" />
              </BorderPane.margin>

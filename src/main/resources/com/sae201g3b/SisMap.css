@@ -2,8 +2,18 @@ root {
     display: block;
 }
 
-.filtre {
+.root {
+    -fx-background-color: #28B463;
+}
+
+.vbox-filtre {
     -fx-border-color: blue;
+    -fx-border-radius: 10;
+}
+
+.slider {
+    -fx-border-color: #A93226;
+    -fx-background-color: #A93226;
     -fx-border-radius: 10;
 }
 
