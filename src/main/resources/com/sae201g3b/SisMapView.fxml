@@ -48,16 +48,15 @@
         <HBox>
             <VBox styleClass="filtre">
                 <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
-                    <children>
-                        <TextField promptText="Exp: 160001" GridPane.columnIndex="1" />
-                        <Label text="Id:" />
-                        <TextField prefWidth="86.0" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="Région:" GridPane.rowIndex="1" />
-                        <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label text="Jusqu'a:" GridPane.rowIndex="3" />
-                        <Label text="De:" GridPane.rowIndex="2" />
-                    </children>
+                    <TextField promptText="Exp: 160001" GridPane.columnIndex="1"/>
+                    <Label text="Id:"/>
+                    <TextField prefWidth="86.0" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1"/>
+                    <Label text="Région:" GridPane.rowIndex="1"/>
+                    <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <Label text="Jusqu'a:" GridPane.rowIndex="3"/>
+                    <Label text="De:" GridPane.rowIndex="2"/>
                 </GridPane>
                 <Button onAction="#afficheSeismeCarte" text="Appliquer les changements" />
                 <Button onAction="#reset" text="Réinitialiser" />

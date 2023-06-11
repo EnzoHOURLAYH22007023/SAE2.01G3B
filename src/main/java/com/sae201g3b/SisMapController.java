@@ -39,8 +39,8 @@ public class SisMapController {
     private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
     private List<Seisme> data;
-    private MapPoint francePoint = new MapPoint(46.227638, 2.213749);
-    private MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
+    private final MapPoint francePoint = new MapPoint(46.227638, 2.213749);
+    private final MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
     public void initialize(){
         /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
         System.setProperty("javafx.platform", "desktop");
@@ -65,8 +65,8 @@ public class SisMapController {
         colonneQualite.setCellValueFactory(new PropertyValueFactory<>("Qualite"));
 
         Database CSV = new Database();
-        CSV.ImportCSV();
-        data = CSV.getDataFiltrer();
+        Database.ImportCSV();
+        data = Database.getDataFiltrer();
         ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(data);
         tableau.setItems(listeSeisme);
 
