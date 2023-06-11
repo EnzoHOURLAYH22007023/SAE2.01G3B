@@ -39,13 +39,15 @@ public class SisMapController {
     private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
     private List<Seisme> data;
+    private MapPoint francePoint = new MapPoint(46.227638, 2.213749);
+    private MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
     public void initialize(){
         /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
         System.setProperty("javafx.platform", "desktop");
         System.setProperty("http.agent", "Gluon Mobile/1.0.3");
 
         /* Initialisation de la map sur la France */
-        MapPoint francePoint = new MapPoint(46.227638, 2.213749);
+
         france.setZoom(6);
         france.flyTo(0,francePoint,0.1);
         //france.setDisable(true);
@@ -92,6 +94,8 @@ public class SisMapController {
                 System.out.println("Lat,Lon ou Intensité est null");
             }
         }
+        france.setCenter(francePoint2);
+        france.flyTo(0.1,francePoint,0.1);
     }
 
     @FXML
