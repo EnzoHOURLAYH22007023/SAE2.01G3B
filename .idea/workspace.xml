@@ -104,7 +104,7 @@
   <component name="RunManager">
     <configuration name="SisMap" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.sae201g3b.SisMapApplication" />
-      <module name="SAE201G3B" />
+      <module name="SAE2.01G3B" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

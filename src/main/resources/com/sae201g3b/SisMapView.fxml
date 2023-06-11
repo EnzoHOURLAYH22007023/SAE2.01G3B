@@ -26,12 +26,6 @@
             </Menu>
         </MenuBar>
     </top>
-    <left>
-        <VBox>
-            <Button fx:id="btnCarte" onAction="#changeCenter" text="Carte" />
-            <Button fx:id="btnTab" onAction="#changeCenter" text="Tableau" />
-        </VBox>
-    </left>
     <center>
         <TableView fx:id="tableau">
             <columns>
