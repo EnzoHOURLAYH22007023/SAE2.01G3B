@@ -42,7 +42,7 @@ public class Database {
          * @see         Seisme
          */
         /*On donne le chemin vers le fichier (A modif selon Window ou Linux)*/
-        String cheminFichier = "C:\\Users\\Massko\\Desktop\\Enzo PC\\GitHub\\SAE2.01G3B/src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
+        String cheminFichier = "src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(cheminFichier))) {
             String ligne;
