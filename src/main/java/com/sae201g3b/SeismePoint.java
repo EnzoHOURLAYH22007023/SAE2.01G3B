@@ -12,10 +12,6 @@ public class SeismePoint extends MapLayer {
  private final MapPoint mapPoint;
  private final Circle circle;
 
- /**
-  * @param mapPoint le point (latitude et longitude) où afficher le cercle
-  * @see com.gluonhq.maps.MapPoint
-  */
  public SeismePoint(MapPoint mapPoint, float intensite) {
   this.mapPoint = mapPoint;
   /* Cercle rouge de taille 5 vert jaune orange rouge*/

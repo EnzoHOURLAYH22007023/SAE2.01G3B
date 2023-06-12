@@ -19,9 +19,17 @@ root {
 
 .slider {
     -fx-background-radius: 20;
-    -fx-text-fill: white;
+    -fx-tick-label-fill: white;
     -fx-background-color: linear-gradient(#A93226,#7b241c );
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+    -fx-major-tick-unit: 1.0;
+    -fx-max-width: 50.0;
+    -fx-max-height: 720.0;
+    -fx-min-width: 50.0;
+    -fx-min-height: 460.0;
+    -fx-orientation: vertical;
+    -fx-show-tick-labels: true;
+    -fx-show-tick-marks: true;
 }
 
 .button {
