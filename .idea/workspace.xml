@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="fix : petit nettoyage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="test : CSS mais j'arrive pas à faire des truc joli" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -256,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686504908064</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="test : CSS mais j'arrive pas à faire des truc joli">
+      <created>1686508208101</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686508208101</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +296,8 @@
     <MESSAGE value="fix : suppréssion des boutons carte et tableau remplacer par des MenuItem" />
     <MESSAGE value="add : Fichier Css" />
     <MESSAGE value="fix : petit nettoyage" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : petit nettoyage" />
+    <MESSAGE value="test : CSS mais j'arrive pas à faire des truc joli" />
+    <option name="LAST_COMMIT_MESSAGE" value="test : CSS mais j'arrive pas à faire des truc joli" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
