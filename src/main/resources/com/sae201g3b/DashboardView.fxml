@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.DashboardController">
     <top>
         <MenuBar>
@@ -15,6 +16,57 @@
         </MenuBar>
     </top>
     <center>
-        <Label text="GG"/>
+        <GridPane prefHeight="227.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <LineChart  fx:id="lineChart" GridPane.columnIndex="1" GridPane.rowIndex="1" >
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </LineChart>
+                <BarChart GridPane.rowIndex="1">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </BarChart>
+                <Label contentDisplay="CENTER" prefHeight="34.0" prefWidth="250.0" text="TST" textAlignment="CENTER" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
     </center>
+    <bottom>
+        <HBox prefHeight="136.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+    </bottom>
+    <right>
+        <VBox prefHeight="675.0" prefWidth="173.0">
+            <Label text="Id:" />
+            <TextField promptText="Exp: 160001" fx:id="id"/>
+            <Label text="Région:" />
+            <TextField promptText="Exp: Pyrenees Occidentales" fx:id="region"/>
+            <Label text="Période" />
+            <Label text="De:" />
+            <TextField promptText="Exp: JJ/MM/AAAA" fx:id="de"/>
+            <Label text="Jusqu'a:" />
+            <TextField promptText="Exp: JJ/MM/AAAA" fx:id="jusqua"/>
+            <Slider majorTickUnit="1.0" max="12.0" minorTickCount="1" orientation="VERTICAL" prefHeight="250.0" prefWidth="40.0" showTickLabels="true" showTickMarks="true" fx:id="intensite"/>
+            <Button text="Appliquer les changements"  onAction="#appliquer"/>
+            <Button text="Réinitialiser" />
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </VBox>
+    </right>
 </BorderPane>
