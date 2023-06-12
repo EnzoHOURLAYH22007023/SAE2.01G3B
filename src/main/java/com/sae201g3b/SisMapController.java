@@ -48,8 +48,8 @@ public class SisMapController {
     private List<Seisme> data;
     private List<Seisme> datafiltrer;
     private Database CSV = new Database();
-    private MapPoint francePoint = new MapPoint(46.227638, 2.213749);
-    private MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
+    private final MapPoint francePoint = new MapPoint(46.227638, 2.213749);
+    private final MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
     public void initialize(){
         /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
         System.setProperty("javafx.platform", "desktop");
