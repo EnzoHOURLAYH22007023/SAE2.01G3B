@@ -47,7 +47,6 @@ public class SisMapController {
         System.setProperty("http.agent", "Gluon Mobile/1.0.3");
 
         /* Initialisation de la map sur la France */
-
         france.setZoom(6);
         france.flyTo(0,francePoint,0.1);
         //france.setDisable(true);

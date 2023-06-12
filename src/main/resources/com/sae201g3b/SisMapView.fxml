@@ -5,8 +5,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" styleClass="root" stylesheets="@SisMap.css"
-            VBox.vgrow="NEVER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.SisMapController">
+<?import org.controlsfx.control.RangeSlider?>
+<BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" stylesheets="@SisMap.css"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.SisMapController">
     <fx:define>
         <ToggleGroup fx:id="editGroup" />
     </fx:define>
@@ -47,16 +48,15 @@
     <right>
         <HBox spacing="10">
             <VBox styleClass="vbox-filtre">
-                <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
+                <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER" styleClass="gridpane-filtre" >
                     <TextField promptText="Exp: 160001" GridPane.columnIndex="1"/>
-                    <Label text="Id:"/>
-                    <TextField prefWidth="86.0" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1"
-                               GridPane.rowIndex="1"/>
-                    <Label text="Région:" GridPane.rowIndex="1"/>
-                    <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                    <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                    <Label text="Jusqu'a:" GridPane.rowIndex="3"/>
-                    <Label text="De:" GridPane.rowIndex="2"/>
+                    <Label text="Id:" />
+                    <TextField promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <Label text="Région:" GridPane.rowIndex="1" />
+                    <TextField promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <TextField promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <Label text="Jusqu'a:" GridPane.rowIndex="3" />
+                    <Label text="De:" GridPane.rowIndex="2" />
                     <Button onAction="#afficheSeismeCarte" text="Appliquer les changements" GridPane.rowIndex="4"/>
                     <Button onAction="#reset" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
                 </GridPane>
@@ -64,11 +64,11 @@
                     <Insets topRightBottomLeft="10.0" />
                 </padding>
             </VBox>
-            <Slider styleClass="slider" majorTickUnit="1.0" max="12.0" maxHeight="720.0" maxWidth="50.0" minHeight="460.0" minWidth="50.0" minorTickCount="1" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" >
+            <RangeSlider styleClass="slider" max="12.0">
                 <padding>
                     <Insets topRightBottomLeft="10.0" />
                 </padding>
-            </Slider>
+            </RangeSlider>
              <BorderPane.margin>
                 <Insets bottom="50.0" left="20.0" right="20.0" top="50.0" />
              </BorderPane.margin>
