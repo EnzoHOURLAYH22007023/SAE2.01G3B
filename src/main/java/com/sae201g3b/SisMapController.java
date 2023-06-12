@@ -26,6 +26,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.sae201g3b.Database.*;
+
 public class SisMapController {
     @FXML
     private BorderPane borderPane;
@@ -38,7 +40,14 @@ public class SisMapController {
     @FXML
     private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
+
+    @FXML
+    private TextField id,region,de,jusqua;
+    @FXML
+    private Slider intensite;
     private List<Seisme> data;
+    private List<Seisme> datafiltrer;
+    private Database CSV = new Database();
     private MapPoint francePoint = new MapPoint(46.227638, 2.213749);
     private MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
     public void initialize(){
@@ -64,9 +73,9 @@ public class SisMapController {
         colonneChoc.setCellValueFactory(new PropertyValueFactory<>("Choc"));
         colonneQualite.setCellValueFactory(new PropertyValueFactory<>("Qualite"));
 
-        Database CSV = new Database();
-        CSV.ImportCSV();
-        data = CSV.getDataFiltrer();
+        ImportCSV();
+        data = getData();
+        datafiltrer = getDataFiltrer();
         ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(data);
         tableau.setItems(listeSeisme);
 
@@ -82,8 +91,7 @@ public class SisMapController {
     }
 
     public void afficheSeismeCarte(){
-        List<Seisme> dataTmp = data;
-        for(Seisme seisme: dataTmp){
+        for(Seisme seisme: datafiltrer){
             try {
                 MapLayer layer = new SeismePoint(new MapPoint(Float.parseFloat(seisme.getLatitude()),
                                                             Float.parseFloat(seisme.getLongitude())),
@@ -98,12 +106,60 @@ public class SisMapController {
         france.flyTo(0.1,francePoint,0.1);
     }
 
-    @FXML
-    public void reset(){
+    public void resetPoint(){
         for(MapLayer layer : mapLayerArrayList){
             france.removeLayer(layer);
         }
         mapLayerArrayList = new ArrayList<>();
+        datafiltrer = getData();
+    }
+
+    @FXML
+    public void resetFiltre(){
+        id.clear();
+        region.clear();
+        de.clear();
+        jusqua.clear();
+        resetPoint();
+        afficheSeismeCarte();
+    }
+
+    public void appliquerChangement(){
+        CSV.resetFiltre();
+        datafiltrer = getDataFiltrer();
+        String filtre = "";
+        String filtre2 = "";
+        String idFiltre = "";
+        if (id.getText() != ""){
+            filtre = id.getText();
+            idFiltre = "Identifiant";
+            filtrer(filtre,filtre2,idFiltre);
+        }
+        if (region.getText() != ""){
+            filtre = region.getText().toUpperCase();
+            idFiltre = "Region";
+            filtrer(filtre,filtre2,idFiltre);
+        }
+        if (jusqua.getText() != ""){
+            filtre2 = jusqua.getText();
+        }
+        if (de.getText() != ""){
+            filtre = de.getText();
+            idFiltre = "Date";
+            filtrer(filtre,filtre2,idFiltre);
+        }
+        if (intensite.getValue() != 0){
+            //a completer
+        }
+        resetPoint();
+        datafiltrer = getDataFiltrer();
+        System.out.println(datafiltrer);
+        data = getData();
+
+        ObservableList<Seisme> listeSeismeFiltrer = FXCollections.observableArrayList(datafiltrer);
+        tableau.setItems(listeSeismeFiltrer);
+
+        afficheSeismeCarte();
     }
 
     @FXML

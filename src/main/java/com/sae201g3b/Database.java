@@ -25,10 +25,11 @@ public class Database {
     //------------PARTIE IMPORTATION DES DATA--------------
     public Database(){
         data = new ArrayList<>();
-        dataFiltrer = data;
+        dataFiltrer = new ArrayList<>();
+        dataFiltrer.addAll(data);
     }
     public static ArrayList<Seisme> getData() {
-        return dataFiltrer;
+        return data;
     }
     public static ArrayList<Seisme> getDataFiltrer() {
         return dataFiltrer;
@@ -59,7 +60,8 @@ public class Database {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        dataFiltrer=data;
+        dataFiltrer.clear();
+        dataFiltrer.addAll(data);
     }
 
     private static Seisme createSeisme(String[] valeurs) {
@@ -99,6 +101,9 @@ public class Database {
          */
 
         /*On créer un iterator pour lire chaque Seisme de notre dataFiltrer*/
+        System.out.println();
+        System.out.println(dataFiltrer);
+        System.out.println();
         Iterator itr = dataFiltrer.iterator();
         while (itr.hasNext()) {
             Seisme var = (Seisme) itr.next();
@@ -117,43 +122,15 @@ public class Database {
                         itr.remove();
                     break;
 
-                case "Heure":
-                    if (!Objects.equals(var.getHeure(), filtre))
-                        itr.remove();
-                    break;
-
-                case "Nom":
-                    if (!Objects.equals(var.getNom(), filtre))
-                        itr.remove();
-                    break;
-
                 case "Region":
                     if (!Objects.equals(var.getRegion(), filtre))
                         itr.remove();
                     break;
 
-                case "Choc":
-                    if (!Objects.equals(var.getChoc(), filtre))
-                        itr.remove();
-                    break;
-
-                case "Latitude":
-                    if (!Objects.equals(var.getLatitude(), filtre))
-                        itr.remove();
-                    break;
-
-                case "Longitude":
-                    if (!Objects.equals(var.getLongitude(), filtre))
-                        itr.remove();
-                    break;
-
                 case "Intensite":
-                    if (!Objects.equals(var.getIntensite(), filtre))
+                    if (isDansIntervalleIntensite(var.getIntensite(),filtre).equals("avant"))
                         itr.remove();
-                    break;
-
-                case "Qualite":
-                    if (!Objects.equals(var.getQualite(), filtre))
+                    if (isDansIntervalleIntensite(var.getIntensite(),filtre2).equals("apres"))
                         itr.remove();
                     break;
             }
@@ -206,6 +183,20 @@ public class Database {
             }
         }
     }
+
+    public static String isDansIntervalleIntensite(String intensite1, String intensite2){
+        Float int1 = Float.parseFloat(intensite1);
+        Float int2 = Float.parseFloat(intensite2);
+        if (int1 < int2){
+            return "avant";
+        }
+        else if (int1 > int2){
+            return "apres";
+        }
+        else {
+            return "egaux";
+        }
+    }
     public ArrayList<Seisme> resetFiltre(){
         /**
          * resetFiltre permet de reset entièrement à la version initial le dataFiltrer si on en a besoins pour recommencer une manipulation sur le data
@@ -213,7 +204,8 @@ public class Database {
          * @return      ArrayList de Seisme -> dataFiltrer
          *
          */
-        dataFiltrer = data;
+        dataFiltrer.clear();
+        dataFiltrer.addAll(data);
         return dataFiltrer;
     }
 }
