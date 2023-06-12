@@ -49,14 +49,14 @@
         <HBox spacing="10">
             <VBox styleClass="vbox-filtre">
                 <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER" styleClass="gridpane-filtre" >
-                    <TextField promptText="Exp: 160001" GridPane.columnIndex="1"/>
                     <Label text="Id:" />
-                    <TextField promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <TextField fx:id="id" promptText="Exp: 160001" GridPane.columnIndex="1"/>
                     <Label text="Région:" GridPane.rowIndex="1" />
-                    <TextField promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                    <TextField promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                    <Label text="Jusqu'a:" GridPane.rowIndex="3" />
+                    <TextField fx:id="region" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
                     <Label text="De:" GridPane.rowIndex="2" />
+                    <TextField fx:id="de" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <Label text="Jusqu'a:" GridPane.rowIndex="3" />
+                    <TextField fx:id="jusqua" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
                     <Button onAction="#appliquerChangement" text="Appliquer les changements" GridPane.rowIndex="4"/>
                     <Button onAction="#resetFiltre" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
                 </GridPane>
