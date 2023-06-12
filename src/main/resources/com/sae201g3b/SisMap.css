@@ -5,7 +5,7 @@ root {
 .root {
 }
 
-.label-filtre {
+.gridpane-filtre .label {
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-font-family: "Arial Narrow";
@@ -19,10 +19,10 @@ root {
 
 .slider {
     -fx-background-radius: 20;
-    -fx-tick-label-fill: white;
     -fx-background-color: linear-gradient(#A93226,#7b241c );
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
-    -fx-major-tick-unit: 1.0;
+    -fx-major-tick-unit: 0.5;
+    -fx-minor-tick-count: 0.0;
     -fx-max-width: 50.0;
     -fx-max-height: 720.0;
     -fx-min-width: 50.0;
@@ -30,6 +30,12 @@ root {
     -fx-orientation: vertical;
     -fx-show-tick-labels: true;
     -fx-show-tick-marks: true;
+    -fx-snap-to-ticks: true;
+    -fx-tick-label-fill: white;
+}
+
+.slider .label{
+    -fx-tick-label-fill: white;
 }
 
 .button {
