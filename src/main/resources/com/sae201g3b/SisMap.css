@@ -5,11 +5,14 @@ root {
 .root {
 }
 
+.label-filtre {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Narrow";
+}
+
 .vbox-filtre {
     -fx-background-radius: 30;
-    -fx-text-fill: white;
-    -fx-font-family: "Arial Narrow";
-    -fx-font-weight: bold;
     -fx-background-color: linear-gradient(#566573,#212f3d);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 }
@@ -17,8 +20,6 @@ root {
 .slider {
     -fx-background-radius: 20;
     -fx-text-fill: white;
-    -fx-font-family: "Arial Narrow";
-    -fx-font-weight: bold;
     -fx-background-color: linear-gradient(#A93226,#7b241c );
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 }

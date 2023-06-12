@@ -47,16 +47,16 @@
     <right>
         <HBox spacing="10">
             <VBox styleClass="vbox-filtre">
-                <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
+                <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER" >
                     <TextField promptText="Exp: 160001" GridPane.columnIndex="1"/>
-                    <Label text="Id:"/>
+                    <Label text="Id:" styleClass="label-filtre"/>
                     <TextField prefWidth="86.0" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1"
                                GridPane.rowIndex="1"/>
-                    <Label text="Région:" GridPane.rowIndex="1"/>
+                    <Label text="Région:" GridPane.rowIndex="1" styleClass="label-filtre"/>
                     <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
                     <TextField promptText="Exp: JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                    <Label text="Jusqu'a:" GridPane.rowIndex="3"/>
-                    <Label text="De:" GridPane.rowIndex="2"/>
+                    <Label text="Jusqu'a:" GridPane.rowIndex="3" styleClass="label-filtre"/>
+                    <Label text="De:" GridPane.rowIndex="2" styleClass="label-filtre"/>
                     <Button onAction="#afficheSeismeCarte" text="Appliquer les changements" GridPane.rowIndex="4"/>
                     <Button onAction="#reset" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
                 </GridPane>

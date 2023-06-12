@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="fix : petit nettoyage">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="fix : petit nettoyage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/DashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/DashboardView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +63,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MenuPrincipalData" />
+        <entry key="$PROJECT_DIR$" value="Sabri-(Dashboard)" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
