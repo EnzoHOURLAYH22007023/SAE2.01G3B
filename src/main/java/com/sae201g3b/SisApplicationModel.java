@@ -1,14 +1,26 @@
 package com.sae201g3b;
 
+/**
+ * SisApplicationModel est une class parent des controlleur permettant de garder de façon globale les donnée provanant de la class Database
+ *
+ * @version 1.0
+ *
+ * @see com.sae201g3b.Database
+ *
+ * @author Alexandre Crespin
+ */
+
 import javafx.scene.control.TextField;
 import org.controlsfx.control.RangeSlider;
 
 public class SisApplicationModel {
+    /*Les attribut ne sont pas lié à des FXML ici mais seulement dans les class enfants*/
     private TextField id,region,de,jusqua;
     private RangeSlider intensite;
     private Database CSV = new Database();
 
 
+    /*Getter et Setter des attributs*/
     public Database getCSV() {
         return CSV;
     }
@@ -29,10 +41,14 @@ public class SisApplicationModel {
     }
 
 
-
     public void resetFiltreControlleur(){
+        /**
+         * resetFiltreControlleur permet de reinitialisé les filtre de saisie de l'utilisateur
+         * en plus de reinitialiser les data en réimportant les données
+         *
+         */
         CSV.getData().clear();
-        CSV.ImportCSV();
+        CSV.ImportCSV();            /*On est obligé de reimporter les données car on a eu de nombreux problème quand les données sont stockées*/
         id.clear();
         region.clear();
         de.clear();
@@ -40,8 +56,12 @@ public class SisApplicationModel {
     }
 
     public void appliquerChangement(){
+        /**
+         * appliquerChangement permet d'appliquer les filtres de l'utilisateur
+         *
+         */
         CSV.getData().clear();
-        CSV.ImportCSV();
+        CSV.ImportCSV();        /*On est obligé de reimporter les données car on a eu de nombreux problème quand les données sont stockées*/
         String filtre = "";
         String filtre2 = "";
         String idFiltre = "";
