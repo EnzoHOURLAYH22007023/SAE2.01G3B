@@ -79,3 +79,30 @@ root {
     position: fixed;
 }
 
+#Intmin{
+ -fx-background-color: #909eab ;
+}
+#Intmoy{
+    -fx-background-color: #909eab ;
+}
+#Intmax{
+    -fx-background-color: #909eab ;
+}
+
+#intmintxt{
+    -fx-text-fill: white;
+    -fx-font-weight: center;
+    -fx-font-family: "Arial Narrow";
+}
+
+#intmoytxt{
+    -fx-text-fill: white;
+    -fx-font-weight: center;
+    -fx-font-family: "Arial Narrow";
+}
+
+#intmaxtxt{
+    -fx-text-fill: white;
+    -fx-font-weight: center;
+    -fx-font-family: "Arial Narrow";
+}

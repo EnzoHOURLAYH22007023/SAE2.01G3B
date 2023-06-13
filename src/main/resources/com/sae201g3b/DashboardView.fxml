@@ -45,22 +45,22 @@
                 </yAxis>
             </LineChart>
             <HBox alignment="CENTER" GridPane.rowIndex="1">
-                <VBox alignment="CENTER" styleClass="solo">
-                    <Label text="Intensité Max" />
+                <VBox fx:id="Intmax" alignment="CENTER" styleClass="solo">
+                    <Label fx:id="intmaxtxt" text="Intensité Max" />
                     <Label fx:id="nbTuple" text="?" />
                     <HBox.margin>
                        <Insets bottom="75.0" left="10.0" right="10.0" top="75.0" />
                     </HBox.margin>
                 </VBox>
-                <VBox alignment="CENTER" styleClass="solo">
-                    <Label text="Intensité Moy" />
+                <VBox fx:id="Intmoy" alignment="CENTER" styleClass="solo">
+                    <Label fx:id="intmoytxt" text="Intensité Moy" />
                     <Label text="?" />
                     <HBox.margin>
                         <Insets bottom="75.0" left="10.0" right="10.0" top="75.0" />
                     </HBox.margin>
                 </VBox>
-                <VBox alignment="CENTER" styleClass="solo">
-                    <Label text="Intensité Min" />
+                <VBox fx:id="Intmin" alignment="CENTER" styleClass="solo">
+                    <Label  fx:id="intmintxt" text="Intensité Min" />
                     <Label text="?" />
                     <HBox.margin>
                         <Insets bottom="75.0" left="10.0" right="10.0" top="75.0" />
