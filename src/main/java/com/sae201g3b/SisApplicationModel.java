@@ -3,7 +3,7 @@ package com.sae201g3b;
 /**
  * SisApplicationModel est une class parent des controlleur permettant de garder de façon globale les donnée provanant de la class Database
  *
- * @version 1.0
+ * @version 2.0
  *
  * @see com.sae201g3b.Database
  *

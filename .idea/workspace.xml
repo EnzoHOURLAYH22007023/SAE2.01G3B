@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="feat : Dashboard complete">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="fix : Commentaire">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisApplicationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisApplicationModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686680249026</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="fix : Commentaire">
+      <created>1686680821589</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686680821589</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +320,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init" />
     <MESSAGE value="ajout : lien comment faire des bons commits" />
     <MESSAGE value="initialisation : application basique" />
     <MESSAGE value="initialisation :" />
@@ -336,7 +344,8 @@
     <MESSAGE value="truc incompéhensible" />
     <MESSAGE value="add : Dashboard abstraction de la carte region" />
     <MESSAGE value="feat : Dashboard complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : Dashboard complete" />
+    <MESSAGE value="fix : Commentaire" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : Commentaire" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

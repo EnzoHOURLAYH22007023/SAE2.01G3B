@@ -5,7 +5,7 @@ package com.sae201g3b;
  * Dans notre récupération nous lisons ligne par ligne le .csv les donnees sont alors sans aucune reference
  * Cette class permet de retrouver cette coherence des donnees
  *
- * @version 1.0
+ * @version 2.0
  *
  * @see Database#ImportCSV()
  * @author Alexandre Crespin
