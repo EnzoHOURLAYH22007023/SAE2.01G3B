@@ -11,16 +11,19 @@ package com.sae201g3b;
 import com.gluonhq.maps.MapLayer;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.RadioMenuItem;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.controlsfx.control.RangeSlider;
 
@@ -35,7 +38,7 @@ public class SisMapController extends SisApplicationModel{
     @FXML
     private TableView tableau;
     @FXML
-    private RadioMenuItem menuCarte,menuTab;
+    private RadioMenuItem menuCarte,menuTab,menuDash;
     @FXML
     private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
@@ -45,6 +48,14 @@ public class SisMapController extends SisApplicationModel{
     private TextField id,region,de,jusqua;      /*On lie cette fois-ci au FXML pour récupérer les données*/
     @FXML
     private RangeSlider intensite;
+    @FXML
+    private Label nbSeisme,maxInt,minInt;
+    @FXML
+    private GridPane dashboard;
+    @FXML
+    private LineChart lineChart;
+    @FXML
+    private BarChart barChart;
 
     public void initialize(){
         /**
@@ -77,7 +88,12 @@ public class SisMapController extends SisApplicationModel{
         //tableau.setItems(listeSeisme);
         tableau.itemsProperty().bind(super.getCSV().dataProperty());
 
+        nbSeisme.textProperty().bind(getCSV().dataProperty().sizeProperty().asString());
+        //maxInt.textProperty().bind(getCSV().getData().stream().max().asString());
+        //minInt.textProperty().bind(getCSV().dataProperty().sizeProperty().asString());
+
         afficheSeismeCarte();
+        initialiseGraph();
     }
 
     public void changeCenter(ActionEvent event){
@@ -91,6 +107,8 @@ public class SisMapController extends SisApplicationModel{
             afficheSeismeCarte();
         } else if (event.getSource()==menuTab){
             borderPane.setCenter(tableau);
+        } else if (event.getSource()==menuDash){
+            borderPane.setCenter(dashboard);
         }
     }
 
@@ -127,6 +145,24 @@ public class SisMapController extends SisApplicationModel{
         mapLayerArrayList = new ArrayList<>();
     }
 
+    public void initialiseGraph(){
+        /**
+         * A VOIR
+         *
+         * @author      Enzo Hourlay
+         */
+        ObservableList<XYChart.Data<String,Number>> nouvData = FXCollections.observableList(new ArrayList<>());
+        for (Seisme seisme : getCSV().getData()) {
+            Float intensite = Float.parseFloat(seisme.getIntensite());
+            String antmp = seisme.getDate().substring(0,4);
+            nouvData.add(new XYChart.Data<>(antmp, intensite));
+        }
+        lineChart.setData(FXCollections.observableArrayList(new XYChart.Series<>(nouvData)));
+        barChart.setData(FXCollections.observableArrayList(new XYChart.Series<>(nouvData)));
+    }
+
+
+
     @FXML
     public void resetFiltreControlleur(){
         /**
@@ -140,6 +176,7 @@ public class SisMapController extends SisApplicationModel{
         super.resetFiltreControlleur();
         resetPoint();
         afficheSeismeCarte();
+        initialiseGraph();
     }
 
     @FXML
@@ -160,6 +197,7 @@ public class SisMapController extends SisApplicationModel{
         resetPoint();
 
         afficheSeismeCarte();
+        initialiseGraph();
     }
     @FXML
     public void changerFXMLDashboard() {
