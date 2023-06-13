@@ -17,14 +17,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.RadioMenuItem;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.controlsfx.control.RangeSlider;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.sae201g3b.Database.*;
 
 public class SisMapController {
     @FXML
@@ -38,7 +44,14 @@ public class SisMapController {
     @FXML
     private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
+
+    @FXML
+    private TextField id,region,de,jusqua;
+    @FXML
+    private RangeSlider intensite;
     private List<Seisme> data;
+    private List<Seisme> datafiltrer;
+    private Database CSV = new Database();
     private final MapPoint francePoint = new MapPoint(46.227638, 2.213749);
     private final MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
     public void initialize(){
@@ -63,9 +76,9 @@ public class SisMapController {
         colonneChoc.setCellValueFactory(new PropertyValueFactory<>("Choc"));
         colonneQualite.setCellValueFactory(new PropertyValueFactory<>("Qualite"));
 
-        Database CSV = new Database();
-        Database.ImportCSV();
-        data = Database.getDataFiltrer();
+        ImportCSV();
+        data = getData();
+        datafiltrer = getDataFiltrer();
         ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(data);
         tableau.setItems(listeSeisme);
 
@@ -81,8 +94,7 @@ public class SisMapController {
     }
 
     public void afficheSeismeCarte(){
-        List<Seisme> dataTmp = data;
-        for(Seisme seisme: dataTmp){
+        for(Seisme seisme: datafiltrer){
             try {
                 MapLayer layer = new SeismePoint(new MapPoint(Float.parseFloat(seisme.getLatitude()),
                                                             Float.parseFloat(seisme.getLongitude())),
@@ -97,12 +109,65 @@ public class SisMapController {
         france.flyTo(0.1,francePoint,0.1);
     }
 
-    @FXML
-    public void reset(){
+    public void resetPoint(){
         for(MapLayer layer : mapLayerArrayList){
             france.removeLayer(layer);
         }
         mapLayerArrayList = new ArrayList<>();
+        datafiltrer = getData();
+    }
+
+    @FXML
+    public void resetFiltre(){
+        id.clear();
+        region.clear();
+        de.clear();
+        jusqua.clear();
+        resetPoint();
+        afficheSeismeCarte();
+    }
+
+    public void appliquerChangement(){
+        CSV.resetFiltre();
+        datafiltrer = getDataFiltrer();
+        String filtre = "";
+        String filtre2 = "";
+        String idFiltre = "";
+        if (id.getText() != ""){
+            filtre = id.getText();
+            idFiltre = "Identifiant";
+            filtrer(filtre,filtre2,idFiltre);
+        }
+        if (region.getText() != ""){
+            filtre = region.getText().toUpperCase();
+            idFiltre = "Region";
+            filtrer(filtre,filtre2,idFiltre);
+        }
+        if (jusqua.getText() != ""){
+            filtre2 = jusqua.getText();
+        }
+        if (de.getText() != ""){
+            filtre = de.getText();
+            idFiltre = "Date";
+            filtrer(filtre,filtre2,idFiltre);
+        }
+        if (intensite.getHighValue() != 0){
+            filtre2 = Float.toString((float) intensite.getHighValue());
+        }
+        if (intensite.getLowValue() != 0){
+            filtre = Float.toString((float) intensite.getLowValue());
+            idFiltre = "Intensite";
+            filtrer(filtre,filtre2,idFiltre);
+        }
+        resetPoint();
+        datafiltrer = getDataFiltrer();
+        System.out.println(datafiltrer);
+        data = getData();
+
+        ObservableList<Seisme> listeSeismeFiltrer = FXCollections.observableArrayList(datafiltrer);
+        tableau.setItems(listeSeismeFiltrer);
+
+        afficheSeismeCarte();
     }
 
     @FXML

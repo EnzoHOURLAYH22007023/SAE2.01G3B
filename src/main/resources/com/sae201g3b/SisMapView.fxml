@@ -14,13 +14,13 @@
     <top>
         <MenuBar>
             <Menu text="Fichier">
-                <MenuItem onAction="#changerFXML" text="Dashboard" />
-                <SeparatorMenuItem />
+                <MenuItem text="Dashboard" onAction="#changerFXML"/>
+                <SeparatorMenuItem/>
                 <MenuItem text="Importer CSV" />
             </Menu>
             <Menu text="Edit">
-                <RadioMenuItem fx:id="menuCarte" onAction="#changeCenter" selected="true" text="Afficher la carte" toggleGroup="$editGroup" />
-                <RadioMenuItem fx:id="menuTab" onAction="#changeCenter" text="Afficher le tableau" toggleGroup="$editGroup" />
+                <RadioMenuItem fx:id="menuCarte" text="Afficher la carte" onAction="#changeCenter" toggleGroup="$editGroup" selected="true"/>
+                <RadioMenuItem fx:id="menuTab" text="Afficher le tableau" onAction="#changeCenter" toggleGroup="$editGroup"/>
             </Menu>
             <Menu text="A propos..">
                 <MenuItem text="Auteur :">
@@ -49,22 +49,22 @@
         <HBox spacing="10">
             <VBox styleClass="vbox-filtre">
                 <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER" styleClass="gridpane-filtre" >
-                    <TextField promptText="Exp: 160001" GridPane.columnIndex="1"/>
                     <Label text="Id:" />
-                    <TextField promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <TextField fx:id="id" promptText="Exp: 160001" GridPane.columnIndex="1"/>
                     <Label text="Région:" GridPane.rowIndex="1" />
-                    <TextField promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                    <TextField promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                    <Label text="Jusqu'a:" GridPane.rowIndex="3" />
+                    <TextField fx:id="region" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
                     <Label text="De:" GridPane.rowIndex="2" />
-                    <Button onAction="#afficheSeismeCarte" text="Appliquer les changements" GridPane.rowIndex="4"/>
-                    <Button onAction="#reset" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                    <TextField fx:id="de" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <Label text="Jusqu'a:" GridPane.rowIndex="3" />
+                    <TextField fx:id="jusqua" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <Button onAction="#appliquerChangement" text="Appliquer les changements" GridPane.rowIndex="4"/>
+                    <Button onAction="#resetFiltre" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
                 </GridPane>
                 <padding>
                     <Insets topRightBottomLeft="10.0" />
                 </padding>
             </VBox>
-            <RangeSlider styleClass="slider" max="12.0">
+            <RangeSlider fx:id="intensite" styleClass="slider" max="12.0" highValue="12.0" lowValue="0.0">
                 <padding>
                     <Insets topRightBottomLeft="10.0" />
                 </padding>
