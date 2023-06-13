@@ -1,3 +1,4 @@
+package com.sae201g3b;
 /**
  * Cette classe est le controller du fichier fxml SisMapView qui est notre page principal
  *
@@ -6,8 +7,6 @@
  * @see com.sae201g3b.SisMapApplication
  * @author Enzo HOURLAY / Alexandre Crespin
  */
-package com.sae201g3b;
-
 import com.gluonhq.maps.MapLayer;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;

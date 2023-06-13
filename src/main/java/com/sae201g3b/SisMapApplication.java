@@ -1,13 +1,12 @@
-/**
-* Main du projet
-*
-* @version 2.0
-*
-* @see com.sae201g3b.SisMapApplication
-* @author Enzo HOURLAY / Alexandre Crespin
-*/
 package com.sae201g3b;
-
+/**
+ * Main du projet
+ *
+ * @version 2.0
+ *
+ * @see com.sae201g3b.SisMapApplication
+ * @author Enzo HOURLAY / Alexandre Crespin
+ */
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

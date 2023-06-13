@@ -1,3 +1,4 @@
+package com.sae201g3b;
 /**
  * Database permet l'importation d'un .csv dans un ArrayList et ensuite son filtrage selon ce que donne l'utilisateur
  *
@@ -5,9 +6,6 @@
  *
  * @author Alexandre Crespin
  */
-
-package com.sae201g3b;
-
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;

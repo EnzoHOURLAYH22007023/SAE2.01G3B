@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : A propos contenue">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="feat : Range slider réinitialise High et Low value" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -348,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686685892062</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="feat : Range slider réinitialise High et Low value">
+      <created>1686686657138</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1686686657138</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +371,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feature terminer : ajout du CSV dans ImportationCSV.java et class Seisme.java pour récupérer par la suite (dans ImportationCSV.java un i qui donne que les deux premier pour tester)" />
     <MESSAGE value="ajout : CSV dans Array" />
     <MESSAGE value="ajout : mise en place des filtre (premièrement avec les région)" />
     <MESSAGE value="feat : affiche les données dans le tableau" />
@@ -391,7 +395,8 @@
     <MESSAGE value="add : new CSS complete" />
     <MESSAGE value="add : Slider rainbow + legende couleur points" />
     <MESSAGE value="add : A propos contenue" />
-    <option name="LAST_COMMIT_MESSAGE" value="add : A propos contenue" />
+    <MESSAGE value="feat : Range slider réinitialise High et Low value" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : Range slider réinitialise High et Low value" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
