@@ -8,4 +8,8 @@ module com.sae201g3b {
 
     opens com.sae201g3b to javafx.fxml;
     exports com.sae201g3b;
+    exports com.sae201g3b.Models;
+    opens com.sae201g3b.Models to javafx.fxml;
+    exports com.sae201g3b.ViewModels;
+    opens com.sae201g3b.ViewModels to javafx.fxml;
 }

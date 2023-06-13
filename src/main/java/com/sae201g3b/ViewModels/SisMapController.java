@@ -6,11 +6,14 @@
  * @see com.sae201g3b.SisMapApplication
  * @author Enzo HOURLAY / Alexandre Crespin
  */
-package com.sae201g3b;
+package com.sae201g3b.ViewModels;
 
 import com.gluonhq.maps.MapLayer;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
+import com.sae201g3b.Seisme;
+import com.sae201g3b.SeismePoint;
+import com.sae201g3b.SisApplicationModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,7 +30,7 @@ import org.controlsfx.control.RangeSlider;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class SisMapController extends SisApplicationModel{
+public class SisMapController extends SisApplicationModel {
     @FXML
     private BorderPane borderPane;
     @FXML

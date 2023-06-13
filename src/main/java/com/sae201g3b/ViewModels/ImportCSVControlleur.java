@@ -1,4 +1,4 @@
-package com.sae201g3b;
+package com.sae201g3b.ViewModels;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

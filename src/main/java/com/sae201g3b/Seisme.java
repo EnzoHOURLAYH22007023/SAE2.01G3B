@@ -1,5 +1,7 @@
 package com.sae201g3b;
 
+import com.sae201g3b.Models.Database;
+
 /**
  * Seisme permet la reconstruction et la manipulation des seismes contenue dans le .csv et que l'on recupère
  * Dans notre récupération nous lisons ligne par ligne le .csv les donnees sont alors sans aucune reference

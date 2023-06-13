@@ -5,11 +5,12 @@ package com.sae201g3b;
  *
  * @version 1.0
  *
- * @see com.sae201g3b.Database
+ * @see com.sae201g3b.Models.Database
  *
  * @author Alexandre Crespin
  */
 
+import com.sae201g3b.Models.Database;
 import javafx.scene.control.TextField;
 import org.controlsfx.control.RangeSlider;
 

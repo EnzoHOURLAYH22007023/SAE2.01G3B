@@ -6,8 +6,9 @@
  * @author Alexandre Crespin
  */
 
-package com.sae201g3b;
+package com.sae201g3b.Models;
 
+import com.sae201g3b.Seisme;
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
