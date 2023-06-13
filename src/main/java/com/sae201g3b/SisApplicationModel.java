@@ -40,7 +40,7 @@ public class SisApplicationModel {
     }
 
     public void appliquerChangement(){
-        CSV.setDataFiltrer((ObservableList<Seisme>) CSV.getData());
+        CSV.ImportCSV();
         String filtre = "";
         String filtre2 = "";
         String idFiltre = "";
