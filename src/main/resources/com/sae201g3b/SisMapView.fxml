@@ -30,24 +30,6 @@
         </MenuBar>
     </top>
     <center>
-        <TableView fx:id="tableau">
-            <columns>
-                <TableColumn fx:id="colonneId" text="Identifiant" />
-                <TableColumn fx:id="colonneDate" text="Date" />
-                <TableColumn fx:id="colonneHeure" text="Heure" />
-                <TableColumn fx:id="colonneNom" text="Nom" />
-                <TableColumn fx:id="colonneRegion" text="Region" />
-                <TableColumn fx:id="colonneChoc" text="Choc" />
-                <TableColumn fx:id="colonneLatitude" text="Latitude" />
-                <TableColumn fx:id="colonneLongitude" text="Longitude" />
-                <TableColumn fx:id="colonneIntensite" text="Intensité" />
-                <TableColumn fx:id="colonneQualite" text="Qualité" />
-            </columns>
-        </TableView>
-        <MapView fx:id="france"/>
-
-    </center>
-    <right>
         <GridPane fx:id="dashboard" prefHeight="227.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -73,8 +55,7 @@
                     <NumberAxis side="LEFT" />
                 </yAxis>
             </BarChart>
-
-            <HBox alignment="CENTER" prefHeight="136.0" prefWidth="600.0" spacing="50.0" GridPane.rowIndex="1">
+            <HBox alignment="CENTER" prefHeight="136.0" prefWidth="600.0" spacing="50.0" GridPane.rowIndex="1" GridPane.columnSpan="2">
                 <VBox alignment="CENTER">
                     <Label text="Nombre de tuple :" />
                     <Label fx:id="nbSeisme" text="?" />
@@ -88,10 +69,25 @@
                     <Label fx:id="minInt" text="?" />
                 </VBox>
             </HBox>
-
-            <MapView fx:id="regionCarte" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
         </GridPane>
+        <TableView fx:id="tableau">
+            <columns>
+                <TableColumn fx:id="colonneId" text="Identifiant" />
+                <TableColumn fx:id="colonneDate" text="Date" />
+                <TableColumn fx:id="colonneHeure" text="Heure" />
+                <TableColumn fx:id="colonneNom" text="Nom" />
+                <TableColumn fx:id="colonneRegion" text="Region" />
+                <TableColumn fx:id="colonneChoc" text="Choc" />
+                <TableColumn fx:id="colonneLatitude" text="Latitude" />
+                <TableColumn fx:id="colonneLongitude" text="Longitude" />
+                <TableColumn fx:id="colonneIntensite" text="Intensité" />
+                <TableColumn fx:id="colonneQualite" text="Qualité" />
+            </columns>
+        </TableView>
+        <MapView fx:id="france"/>
+
+    </center>
+    <right>
         <HBox spacing="10">
             <VBox styleClass="vbox-filtre">
                 <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER" styleClass="gridpane-filtre" >

@@ -72,7 +72,6 @@ public class SisMapController extends SisApplicationModel{
         /* Initialisation de la map sur la France */
         france.setZoom(6);
         france.flyTo(0,francePoint,0.1);
-        //france.setDisable(true);
 
         /* Initialisation de la TableView qui affiche les données des séismes */
         colonneId.setCellValueFactory(new PropertyValueFactory<>("Identifiant"));
@@ -147,23 +146,21 @@ public class SisMapController extends SisApplicationModel{
         mapLayerArrayList = new ArrayList<>();
     }
 
-    public void initialiseGraph(){
+    public void initialiseGraph() {
         /**
          * A VOIR
          *
-         * @author      Enzo Hourlay
+         * @author Enzo Hourlay
          */
-        ObservableList<XYChart.Data<String,Number>> nouvData = FXCollections.observableList(new ArrayList<>());
+        ObservableList<XYChart.Data<String, Number>> nouvData = FXCollections.observableList(new ArrayList<>());
         for (Seisme seisme : getCSV().getData()) {
             Float intensite = Float.parseFloat(seisme.getIntensite());
-            String antmp = seisme.getDate().substring(0,4);
+            String antmp = seisme.getDate().substring(0, 4);
             nouvData.add(new XYChart.Data<>(antmp, intensite));
         }
         lineChart.setData(FXCollections.observableArrayList(new XYChart.Series<>(nouvData)));
         barChart.setData(FXCollections.observableArrayList(new XYChart.Series<>(nouvData)));
     }
-
-
 
     @FXML
     public void resetFiltreControlleur(){
@@ -210,23 +207,6 @@ public class SisMapController extends SisApplicationModel{
          */
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DashboardView.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
-            Stage stage = (Stage) borderPane.getScene().getWindow();
-            stage.setScene(scene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    public void changerFXMLImport() {
-        /**
-         * A VOIR
-         *
-         * @author      Alexandre Crespin
-         */
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ImportCSV.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
             Stage stage = (Stage) borderPane.getScene().getWindow();
             stage.setScene(scene);
