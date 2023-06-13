@@ -9,9 +9,9 @@
     <top>
         <MenuBar>
             <Menu text="Fichier">
-                <MenuItem text="Carte" onAction="#changerFXML"/>
+                <MenuItem text="Carte" onAction="#changerFXMLMap"/>
                 <SeparatorMenuItem/>
-                <MenuItem text="Importer CSV" />
+                <MenuItem text="Importer CSV" onAction="#changerFXMLImport"/>
             </Menu>
             <Menu text="A propos.." />
         </MenuBar>

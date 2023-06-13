@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="ajout : date en entrer beaucoup plus facile pour l'utilisateur via adaptation du filtre à l'entrer">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="ajout : commentaire">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/ImportCSVControlleur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/ImportCSV.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Seisme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisApplicationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisApplicationModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/DashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/DashboardView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686661100098</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="ajout : commentaire">
+      <created>1686662528547</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686662528547</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +280,6 @@
     <MESSAGE value="ajout : ImportationCSV.java" />
     <MESSAGE value="feature terminer : ajout du CSV dans ImportationCSV.java et class Seisme.java pour récupérer par la suite (dans ImportationCSV.java un i qui donne que les deux premier pour tester)" />
     <MESSAGE value="ajout : CSV dans Array" />
-    <MESSAGE value="ajout : commentaire" />
     <MESSAGE value="ajout : mise en place des filtre (premièrement avec les région)" />
     <MESSAGE value="feat : affiche les données dans le tableau" />
     <MESSAGE value="feat : Couleur des points change celon l'intensité du seisme" />
@@ -282,7 +291,8 @@
     <MESSAGE value="resolution bug : data qui ne se reinitialise pas" />
     <MESSAGE value="fix : bug des reinitialisation des points + suppression de dataFiltrer ne servant plus à rien" />
     <MESSAGE value="ajout : date en entrer beaucoup plus facile pour l'utilisateur via adaptation du filtre à l'entrer" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout : date en entrer beaucoup plus facile pour l'utilisateur via adaptation du filtre à l'entrer" />
+    <MESSAGE value="ajout : commentaire" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout : commentaire" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

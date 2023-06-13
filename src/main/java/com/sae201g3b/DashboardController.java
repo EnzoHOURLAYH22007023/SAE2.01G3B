@@ -55,9 +55,26 @@ public class DashboardController extends SisApplicationModel{
         lineChart.dataProperty().bind(chart);
     }
     @FXML
-    public void changerFXML() {
+    public void changerFXMLMap() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SisMapView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+            Stage stage = (Stage) borderPane.getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void changerFXMLImport() {
+        /**
+         * A VOIR
+         *
+         * @author      Alexandre Crespin
+         */
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ImportCSV.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
             Stage stage = (Stage) borderPane.getScene().getWindow();
             stage.setScene(scene);
