@@ -11,7 +11,6 @@ package com.sae201g3b;
 import com.gluonhq.maps.MapLayer;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,11 +27,8 @@ import org.controlsfx.control.RangeSlider;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
-import static com.sae201g3b.Database.*;
-
-public class SisMapController {
+public class SisMapController extends SisApplicationModel{
     @FXML
     private BorderPane borderPane;
     @FXML
@@ -44,16 +40,14 @@ public class SisMapController {
     @FXML
     private TableColumn<Seisme,String> colonneId,colonneLatitude,colonneLongitude,colonneIntensite,colonneDate,colonneHeure,colonneNom,colonneRegion,colonneChoc,colonneQualite;
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
+    private final MapPoint francePoint = new MapPoint(46.227638, 2.213749);
+    private final MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
 
     @FXML
     private TextField id,region,de,jusqua;
     @FXML
     private RangeSlider intensite;
-    private List<Seisme> data;
-    private List<Seisme> datafiltrer;
-    private Database CSV = new Database();
-    private final MapPoint francePoint = new MapPoint(46.227638, 2.213749);
-    private final MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
+
     public void initialize(){
         /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
         System.setProperty("javafx.platform", "desktop");
@@ -76,11 +70,9 @@ public class SisMapController {
         colonneChoc.setCellValueFactory(new PropertyValueFactory<>("Choc"));
         colonneQualite.setCellValueFactory(new PropertyValueFactory<>("Qualite"));
 
-        ImportCSV();
-        data = getData();
-        datafiltrer = getDataFiltrer();
-        ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(data);
-        tableau.setItems(listeSeisme);
+        //ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(CSV.getData());
+        //tableau.setItems(listeSeisme);
+        tableau.itemsProperty().bind(super.getCSV().dataFiltrerProperty());
 
         afficheSeismeCarte();
     }
@@ -88,13 +80,14 @@ public class SisMapController {
     public void changeCenter(ActionEvent event){
         if(event.getSource()==menuCarte){
             borderPane.setCenter(france);
+            afficheSeismeCarte();
         } else if (event.getSource()==menuTab){
             borderPane.setCenter(tableau);
         }
     }
 
     public void afficheSeismeCarte(){
-        for(Seisme seisme: datafiltrer){
+        for(Seisme seisme: super.getCSV().getDataFiltrer()){
             try {
                 MapLayer layer = new SeismePoint(new MapPoint(Float.parseFloat(seisme.getLatitude()),
                                                             Float.parseFloat(seisme.getLongitude())),
@@ -114,62 +107,28 @@ public class SisMapController {
             france.removeLayer(layer);
         }
         mapLayerArrayList = new ArrayList<>();
-        datafiltrer = getData();
+        super.getCSV().setDataFiltrer((ObservableList<Seisme>) super.getCSV().getData());
     }
 
     @FXML
-    public void resetFiltre(){
-        id.clear();
-        region.clear();
-        de.clear();
-        jusqua.clear();
+    public void resetFiltreControlleur(){
+        super.resetFiltreControlleur();
         resetPoint();
         afficheSeismeCarte();
     }
 
+    @FXML
     public void appliquerChangement(){
-        CSV.resetFiltre();
-        datafiltrer = getDataFiltrer();
-        String filtre = "";
-        String filtre2 = "";
-        String idFiltre = "";
-        if (id.getText() != ""){
-            filtre = id.getText();
-            idFiltre = "Identifiant";
-            filtrer(filtre,filtre2,idFiltre);
-        }
-        if (region.getText() != ""){
-            filtre = region.getText().toUpperCase();
-            idFiltre = "Region";
-            filtrer(filtre,filtre2,idFiltre);
-        }
-        if (jusqua.getText() != ""){
-            filtre2 = jusqua.getText();
-        }
-        if (de.getText() != ""){
-            filtre = de.getText();
-            idFiltre = "Date";
-            filtrer(filtre,filtre2,idFiltre);
-        }
-        if (intensite.getHighValue() != 0){
-            filtre2 = Float.toString((float) intensite.getHighValue());
-        }
-        if (intensite.getLowValue() != 0){
-            filtre = Float.toString((float) intensite.getLowValue());
-            idFiltre = "Intensite";
-            filtrer(filtre,filtre2,idFiltre);
-        }
+        super.setId(id);
+        super.setRegion(region);
+        super.setDe(de);
+        super.setJusqua(jusqua);
+        super.setIntensite(intensite);
+        super.appliquerChangement();
         resetPoint();
-        datafiltrer = getDataFiltrer();
-        System.out.println(datafiltrer);
-        data = getData();
-
-        ObservableList<Seisme> listeSeismeFiltrer = FXCollections.observableArrayList(datafiltrer);
-        tableau.setItems(listeSeismeFiltrer);
 
         afficheSeismeCarte();
     }
-
     @FXML
     public void changerFXML() {
         try {

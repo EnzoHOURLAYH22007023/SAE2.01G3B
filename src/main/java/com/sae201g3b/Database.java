@@ -1,48 +1,61 @@
 /**
  * Database permet l'importation d'un .csv dans un ArrayList et ensuite son filtrage selon ce que donne l'utilisateur
  *
- * @version 1.0
+ * @version 2.0
  *
  * @author Alexandre Crespin
  */
 
 package com.sae201g3b;
 
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Objects;
 
 public class Database {
-    //Un ArrayList qui permet de stocker toutes les données du CSV
-    private static ArrayList<Seisme> data;
+    /*Un ListProperty qui permet de stocker toutes les données du CSV*/
+    private ListProperty<Seisme> data;
 
-    //Un ArrayList copie de data permettant d'effectuer de la modification sans changer notre csv de base
-    private static ArrayList<Seisme> dataFiltrer;
+    /*Un ListProperty copie de data permettant d'effectuer de la modification sans changer notre csv de base*/
+    private ListProperty<Seisme> dataFiltrer;
 
     //------------PARTIE IMPORTATION DES DATA--------------
     public Database(){
-        data = new ArrayList<>();
-        dataFiltrer = new ArrayList<>();
-        dataFiltrer.addAll(data);
+        /**
+         * Constructeur de la class Database
+         *
+         * @author      Enzo Hourlay / Alexandre Crespin
+         */
+        data = new SimpleListProperty<>(FXCollections.observableArrayList());               /*Initialisation de data comme une SimpleListProperty*/
+        dataFiltrer = new SimpleListProperty<>(FXCollections.observableArrayList());        /*De même pour dataFiltrer*/
+        ImportCSV();                                                                        /*Importation du CSV*/
+        setDataFiltrer((ObservableList<Seisme>) getData());                                 /*On met data dans dataFiltrer*/
     }
-    public static ArrayList<Seisme> getData() {
-        return data;
-    }
-    public static ArrayList<Seisme> getDataFiltrer() {
-        return dataFiltrer;
-    }
-    public static void ImportCSV() {
+
+    /*Getters et Setters de data, dataFiltrer et data FiltrerProperty*/
+    public List<Seisme> getData() {return data;}
+    public void setData(ObservableList<Seisme> data) {this.data.set(data);}
+    public List<Seisme> getDataFiltrer() {return dataFiltrer;}
+    public void setDataFiltrer(ObservableList<Seisme> dataFiltrer) {this.dataFiltrer.set(dataFiltrer);}
+    public ListProperty<Seisme> dataFiltrerProperty(){return dataFiltrer;}
+
+    public void ImportCSV() {
         /**
          * ImportCSV permet l'importation du .csv
+         * Elle modifie data pour lui ajouté toute les seisme
          *
-         * @return      rend un ArrayList contenant des Seisme -> data
          *
          * @see         Seisme
          */
-        /*On donne le chemin vers le fichier (A modif selon Window ou Linux)*/
+        /*On donne le chemin vers le fichier*/
         String cheminFichier = "src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(cheminFichier))) {
@@ -55,16 +68,14 @@ public class Database {
                 String[] valeurs = ligne.split(",");
                 Seisme seisme = createSeisme(valeurs);
                 data.add(seisme);
-
+                dataFiltrer.add(seisme);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        dataFiltrer.clear();
-        dataFiltrer.addAll(data);
     }
 
-    private static Seisme createSeisme(String[] valeurs) {
+    private Seisme createSeisme(String[] valeurs) {
         /**
          * createSeisme permet de recréer les Seisme apres avoir recuperer les data
          *
@@ -88,22 +99,17 @@ public class Database {
     }
 
     //------------PARTIE FILTRE--------------
-    public static ArrayList<Seisme> filtrer(String filtre, String filtre2, String idFiltre){
+    public void filtrer(String filtre, String filtre2, String idFiltre){
         /**
-         * createSeisme permet de recréer les Seisme apres avoir recuperer les data
+         * filtrer permet de supprimer les Seisme qui ne corresponde pas à nos filtre
          *
-         * @return      ArrayList de Seisme -> dataFiltrer
          * @param       String filtre : le filtre entrer par l'utilisateur (represente aussi la première date dans un inteervalle de date)
          * @param       String filtre2 : dans le cas d'un intervalle de date, represente la deuxième date
          * @param       String idFiltre : permet de spécifier quelle attribut du csv est à modifier
          *
          * @see         Seisme
          */
-
         /*On créer un iterator pour lire chaque Seisme de notre dataFiltrer*/
-        System.out.println();
-        System.out.println(dataFiltrer);
-        System.out.println();
         Iterator itr = dataFiltrer.iterator();
         while (itr.hasNext()) {
             Seisme var = (Seisme) itr.next();
@@ -128,6 +134,7 @@ public class Database {
                     break;
 
                 case "Intensite":
+                    /*L'intensite est un RangeSlider donc il faut vérifier les valeur pour le hight poin et le low point*/
                     if (isDansIntervalleIntensite(var.getIntensite(),filtre).equals("avant"))
                         itr.remove();
                     if (isDansIntervalleIntensite(var.getIntensite(),filtre2).equals("apres"))
@@ -135,10 +142,9 @@ public class Database {
                     break;
             }
         }
-        return dataFiltrer;
     }
 
-    public static String isAvantApres(String date1, String date2){
+    public String isAvantApres(String date1, String date2){
         /**
          * isAnvantApres permet de determiner si la premiere date est avant, apres ou la même que la deuxieme date
          *
@@ -184,9 +190,21 @@ public class Database {
         }
     }
 
-    public static String isDansIntervalleIntensite(String intensite1, String intensite2){
+    public String isDansIntervalleIntensite(String intensite1, String intensite2){
+        /**
+         * isDansIntervalleIntensite permet de determiner si la premiere intensite est avant, apres ou la même que la deuxieme intensite
+         *
+         * @return      String avant si intensite1 avant intensite2 / String apres si intensite1 apres intensite2 / String egaux si intensite1 = intensite2
+         * @param       String intensite1 : l'intensite a verifier
+         * @param       String intensite2 : l'intensite de reference
+         *
+         */
+
+        /*On transforme les String en Float pour le calcul*/
         Float int1 = Float.parseFloat(intensite1);
         Float int2 = Float.parseFloat(intensite2);
+
+
         if (int1 < int2){
             return "avant";
         }
@@ -196,16 +214,5 @@ public class Database {
         else {
             return "egaux";
         }
-    }
-    public ArrayList<Seisme> resetFiltre(){
-        /**
-         * resetFiltre permet de reset entièrement à la version initial le dataFiltrer si on en a besoins pour recommencer une manipulation sur le data
-         *
-         * @return      ArrayList de Seisme -> dataFiltrer
-         *
-         */
-        dataFiltrer.clear();
-        dataFiltrer.addAll(data);
-        return dataFiltrer;
     }
 }

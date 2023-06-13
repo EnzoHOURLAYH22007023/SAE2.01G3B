@@ -63,16 +63,16 @@
     <right>
         <VBox>
             <Label text="Id:" />
-            <TextField fx:id="id" promptText="Exp: 160001" />
+            <TextField promptText="Exp: 160001" />
             <Label text="Région:" />
-            <TextField fx:id="region" promptText="Exp: Pyrenees Occidentales" />
+            <TextField promptText="Exp: Pyrenees Occidentales" />
             <Label text="Période" />
             <Label text="De:" />
-            <TextField fx:id="de" promptText="Exp: JJ/MM/AAAA" />
+            <TextField promptText="Exp: JJ/MM/AAAA" />
             <Label text="Jusqu'a:" />
-            <TextField fx:id="jusqua" promptText="Exp: JJ/MM/AAAA" />
-            <Slider fx:id="intensite" majorTickUnit="1.0" max="12.0" minorTickCount="1" orientation="VERTICAL" prefHeight="250.0" prefWidth="40.0" showTickLabels="true" showTickMarks="true" />
-            <Button onAction="#appliquer" text="Appliquer les changements" />
+            <TextField promptText="Exp: JJ/MM/AAAA" />
+            <Slider majorTickUnit="1.0" max="12.0" minorTickCount="1" orientation="VERTICAL" prefHeight="250.0" prefWidth="40.0" showTickLabels="true" showTickMarks="true" />
+            <Button onAction="#appliquerChangement" text="Appliquer les changements" />
             <Button text="Réinitialiser" />
             <BorderPane.margin>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

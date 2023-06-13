@@ -24,10 +24,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static com.sae201g3b.Database.ImportCSV;
-import static com.sae201g3b.Database.getData;
-
-public class DashboardController {
+public class DashboardController extends SisApplicationModel{
     @FXML
     private BorderPane borderPane;
     @FXML
@@ -37,19 +34,17 @@ public class DashboardController {
     private SimpleListProperty<Seisme> data;
     private static ListBinding<XYChart.Series<String,Number>> chart;
     public void initialize(){
-        Database CSV = new Database();
-        ImportCSV();
-        data = new SimpleListProperty<>(FXCollections.observableList(getData()));
-        nbTuple.textProperty().bind(data.sizeProperty().asString());
+        Database CSV = super.getCSV();
+        nbTuple.textProperty().bind(CSV.dataFiltrerProperty().sizeProperty().asString());
 
         chart = new ListBinding<>() {
             {
-                super.bind(data);
+                super.bind(CSV.dataFiltrerProperty());
             }
             @Override
             protected ObservableList computeValue() {
                 ObservableList<XYChart.Data<String,Number>> tmp = FXCollections.observableList(new ArrayList<>());
-                for (Seisme seisme : data) {
+                for (Seisme seisme : CSV.getDataFiltrer()) {
                     Float intensite = Float.parseFloat(seisme.getIntensite());
                     String antmp = seisme.getDate().substring(0,4);
                     tmp.add(new XYChart.Data<>(antmp, intensite));
@@ -69,11 +64,6 @@ public class DashboardController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    @FXML
-    private void appliquer(){
-
     }
 
 }
