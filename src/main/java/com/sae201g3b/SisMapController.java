@@ -16,8 +16,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
@@ -30,7 +28,6 @@ import javafx.stage.Stage;
 import org.controlsfx.control.RangeSlider;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class SisMapController extends SisApplicationModel{
@@ -147,7 +144,9 @@ public class SisMapController extends SisApplicationModel{
 
     public void changeCenter(ActionEvent event){
         /**
-         * A VOIR
+         * changeCenter permet de faire le pont entre les différent affichage du centre du borderPane
+         * Celon le RadioMenuItem clicker dans la MenuBar du top elle change le centre entre :
+         * La carte des séismes, le tableau de données sismique ou la dashboard
          *
          * @author      Enzo Hourlay
          */
@@ -163,7 +162,8 @@ public class SisMapController extends SisApplicationModel{
 
     public void afficheSeismeCarte(){
         /**
-         * A VOIR
+         * afficheSeismeCarte va récupéré les données du fichier CSV grâce a la classe Database
+         * Puis pour chaque séisme enregistrer crée un mapLayer contenant un point et ajoutte ce layer a la carte.
          *
          * @author      Enzo Hourlay
          */
@@ -262,25 +262,14 @@ public class SisMapController extends SisApplicationModel{
         afficheSeismeCarte();
         initialiseGraph();
     }
-    @FXML
-    public void changerFXMLDashboard() {
-        /**
-         * A VOIR
-         *
-         * @author      Enzo Hourlay
-         */
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DashboardView.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
-            Stage stage = (Stage) borderPane.getScene().getWindow();
-            stage.setScene(scene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @FXML
     public void importFile(){
+        /**
+         * importFile pertmet de charger et d'importerun un fichier CSV de données sismique
+         *
+         * @author      Alexandre Crespin
+         */
         FileChooser file = new FileChooser();
         file.setTitle("Ouvrir le fichier");
         file.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("CSV File", "*.csv"));

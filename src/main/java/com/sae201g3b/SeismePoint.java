@@ -6,7 +6,7 @@ import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-/** Affiche un point rouge sur la carte */
+/** Affiche un point sur la carte */
 public class SeismePoint extends MapLayer {
 
  private final MapPoint mapPoint;
@@ -14,7 +14,7 @@ public class SeismePoint extends MapLayer {
 
  public SeismePoint(MapPoint mapPoint, float intensite) {
   this.mapPoint = mapPoint;
-  /* Cercle rouge de taille 5 vert jaune orange rouge*/
+  /* Cercle de taille 5 dont la couleur varie selon l'intesité du seisme qu'il représente */
   if(intensite <= 3 ){
    this.circle = new Circle(5, Color.GREEN);
   }else if (intensite > 3 && intensite <= 6){

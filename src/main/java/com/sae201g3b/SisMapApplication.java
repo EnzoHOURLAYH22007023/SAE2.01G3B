@@ -1,3 +1,11 @@
+/**
+* Main du projet
+*
+* @version 2.0
+*
+* @see com.sae201g3b.SisMapApplication
+* @author Enzo HOURLAY / Alexandre Crespin
+*/
 package com.sae201g3b;
 
 import javafx.application.Application;
