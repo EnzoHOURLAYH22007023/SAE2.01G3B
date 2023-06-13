@@ -11,7 +11,7 @@ public class SisMapApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(SisMapApplication.class.getResource("DashboardView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+        Scene scene = new Scene(fxmlLoader.load(), 1480, 720); //1280 et 720
         stage.setTitle("SisMapApplication");
         stage.setScene(scene);
         stage.show();

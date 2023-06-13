@@ -7,7 +7,7 @@ root {
 
 .gridpane-filtre .label {
     -fx-text-fill: white;
-    -fx-font-weight: bold;
+    -fx-font-weight: center;
     -fx-font-family: "Arial Narrow";
 }
 
@@ -38,7 +38,17 @@ root {
     -fx-tick-label-fill: white;
 }
 
-.button {
+
+.solo {
+    -fx-background-radius: 30;
+    -fx-background-color: #EAECEE;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+    -fx-pref-width: 125;
+    -fx-pref-height: 100;
+}
+
+
+#Appliquer{
     -fx-text-fill: white;
     -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
@@ -46,10 +56,26 @@ root {
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 }
 
-.solo{
-    -fx-background-radius: 30;
-    -fx-background-color: #EAECEE;
+#Reset{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
-    -fx-pref-width: 125;
-    -fx-pref-height: 100;
 }
+
+#borderPane{
+    -fx-background-color: #6c7e90;
+
+}
+
+#MBar{
+    -fx-background-color: #808080;
+}
+
+#Utilisateur{
+    max-height: 500px;
+    max-width: 200px;
+    position: fixed;
+}
+
