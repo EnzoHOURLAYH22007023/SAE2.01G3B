@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="fix : suppression menuItem Dashboard">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : new CSS complete" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -316,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686681304536</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add : new CSS complete">
+      <created>1686682792894</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686682792894</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +337,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initialisation : application basique" />
     <MESSAGE value="initialisation :" />
     <MESSAGE value="ajout : ImportationCSV.java" />
     <MESSAGE value="feature terminer : ajout du CSV dans ImportationCSV.java et class Seisme.java pour récupérer par la suite (dans ImportationCSV.java un i qui donne que les deux premier pour tester)" />
@@ -359,7 +361,8 @@
     <MESSAGE value="feat : Dashboard complete" />
     <MESSAGE value="fix : Commentaire" />
     <MESSAGE value="fix : suppression menuItem Dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : suppression menuItem Dashboard" />
+    <MESSAGE value="add : new CSS complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : new CSS complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
