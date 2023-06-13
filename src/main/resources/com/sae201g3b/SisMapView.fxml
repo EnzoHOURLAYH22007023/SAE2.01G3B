@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 
 <?import org.controlsfx.control.RangeSlider?>
-<BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" stylesheets="@SisMap.css"
+<BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" stylesheets="@SisApp.css"
             xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.SisMapController">
     <fx:define>
         <ToggleGroup fx:id="editGroup" />

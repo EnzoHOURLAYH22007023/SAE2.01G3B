@@ -37,6 +37,10 @@ public class DashboardController {
     private SimpleListProperty<Seisme> data;
     private static ListBinding<XYChart.Series<String,Number>> chart;
     public void initialize(){
+        /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
+        System.setProperty("javafx.platform", "desktop");
+        System.setProperty("http.agent", "Gluon Mobile/1.0.3");
+
         Database CSV = new Database();
         ImportCSV();
         data = new SimpleListProperty<>(FXCollections.observableList(getData()));
