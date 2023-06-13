@@ -24,9 +24,6 @@ public class Database {
     /*Un ListProperty qui permet de stocker toutes les données du CSV*/
     private ListProperty<Seisme> data;
 
-    /*Un ListProperty copie de data permettant d'effectuer de la modification sans changer notre csv de base*/
-    private ListProperty<Seisme> dataFiltrer;
-
     //------------PARTIE IMPORTATION DES DATA--------------
     public Database(){
         /**
@@ -35,17 +32,13 @@ public class Database {
          * @author      Enzo Hourlay / Alexandre Crespin
          */
         data = new SimpleListProperty<>(FXCollections.observableArrayList());               /*Initialisation de data comme une SimpleListProperty*/
-        dataFiltrer = new SimpleListProperty<>(FXCollections.observableArrayList());        /*De même pour dataFiltrer*/
         ImportCSV();                                                                        /*Importation du CSV*/
-        setDataFiltrer((ObservableList<Seisme>) getData());                                 /*On met data dans dataFiltrer*/
     }
 
     /*Getters et Setters de data, dataFiltrer et data FiltrerProperty*/
     public List<Seisme> getData() {return data;}
     public void setData(ObservableList<Seisme> data) {this.data.set(data);}
-    public List<Seisme> getDataFiltrer() {return dataFiltrer;}
-    public void setDataFiltrer(ObservableList<Seisme> dataFiltrer) {this.dataFiltrer.set(dataFiltrer);}
-    public ListProperty<Seisme> dataFiltrerProperty(){return dataFiltrer;}
+    public ListProperty<Seisme> dataProperty(){return data;}
 
     public void ImportCSV() {
         /**
@@ -68,7 +61,6 @@ public class Database {
                 String[] valeurs = ligne.split(",");
                 Seisme seisme = createSeisme(valeurs);
                 data.add(seisme);
-                dataFiltrer.add(seisme);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -110,7 +102,7 @@ public class Database {
          * @see         Seisme
          */
         /*On créer un iterator pour lire chaque Seisme de notre dataFiltrer*/
-        Iterator itr = dataFiltrer.iterator();
+        Iterator itr = data.iterator();
         while (itr.hasNext()) {
             Seisme var = (Seisme) itr.next();
             switch (idFiltre) {

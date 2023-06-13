@@ -1,6 +1,5 @@
 package com.sae201g3b;
 
-import javafx.collections.ObservableList;
 import javafx.scene.control.TextField;
 import org.controlsfx.control.RangeSlider;
 
@@ -32,7 +31,8 @@ public class SisApplicationModel {
 
 
     public void resetFiltreControlleur(){
-        CSV.setDataFiltrer((ObservableList<Seisme>) CSV.getData());
+        CSV.getData().clear();
+        CSV.ImportCSV();
         id.clear();
         region.clear();
         de.clear();
@@ -40,6 +40,7 @@ public class SisApplicationModel {
     }
 
     public void appliquerChangement(){
+        CSV.getData().clear();
         CSV.ImportCSV();
         String filtre = "";
         String filtre2 = "";
@@ -70,7 +71,5 @@ public class SisApplicationModel {
             idFiltre = "Intensite";
             CSV.filtrer(filtre,filtre2,idFiltre);
         }
-        System.out.println(CSV.getData());
-        System.out.println(CSV.getDataFiltrer());
     }
 }

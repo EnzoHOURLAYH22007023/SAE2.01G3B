@@ -35,16 +35,16 @@ public class DashboardController extends SisApplicationModel{
     private static ListBinding<XYChart.Series<String,Number>> chart;
     public void initialize(){
         Database CSV = super.getCSV();
-        nbTuple.textProperty().bind(CSV.dataFiltrerProperty().sizeProperty().asString());
+        nbTuple.textProperty().bind(CSV.dataProperty().sizeProperty().asString());
 
         chart = new ListBinding<>() {
             {
-                super.bind(CSV.dataFiltrerProperty());
+                super.bind(CSV.dataProperty());
             }
             @Override
             protected ObservableList computeValue() {
                 ObservableList<XYChart.Data<String,Number>> tmp = FXCollections.observableList(new ArrayList<>());
-                for (Seisme seisme : CSV.getDataFiltrer()) {
+                for (Seisme seisme : CSV.getData()) {
                     Float intensite = Float.parseFloat(seisme.getIntensite());
                     String antmp = seisme.getDate().substring(0,4);
                     tmp.add(new XYChart.Data<>(antmp, intensite));

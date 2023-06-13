@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : LineChart affiche les données">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="resolution bug : data qui ne se reinitialise pas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisApplicationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisApplicationModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686606798342</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="resolution bug : data qui ne se reinitialise pas">
+      <created>1686659624178</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686659624178</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +265,8 @@
     <MESSAGE value="ajout : Methode afficheSeismeCarte pour afficher les points sur la carte&#10;et refactor du nom de certaine classe" />
     <MESSAGE value="add : filtre de base" />
     <MESSAGE value="add : LineChart affiche les données" />
-    <option name="LAST_COMMIT_MESSAGE" value="add : LineChart affiche les données" />
+    <MESSAGE value="resolution bug : data qui ne se reinitialise pas" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolution bug : data qui ne se reinitialise pas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

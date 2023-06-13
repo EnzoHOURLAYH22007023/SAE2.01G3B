@@ -11,7 +11,6 @@ package com.sae201g3b;
 import com.gluonhq.maps.MapLayer;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -72,7 +71,7 @@ public class SisMapController extends SisApplicationModel{
 
         //ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(CSV.getData());
         //tableau.setItems(listeSeisme);
-        tableau.itemsProperty().bind(super.getCSV().dataFiltrerProperty());
+        tableau.itemsProperty().bind(super.getCSV().dataProperty());
 
         afficheSeismeCarte();
     }
@@ -87,7 +86,7 @@ public class SisMapController extends SisApplicationModel{
     }
 
     public void afficheSeismeCarte(){
-        for(Seisme seisme: super.getCSV().getDataFiltrer()){
+        for(Seisme seisme: super.getCSV().getData()){
             try {
                 MapLayer layer = new SeismePoint(new MapPoint(Float.parseFloat(seisme.getLatitude()),
                                                             Float.parseFloat(seisme.getLongitude())),
@@ -107,7 +106,6 @@ public class SisMapController extends SisApplicationModel{
             france.removeLayer(layer);
         }
         mapLayerArrayList = new ArrayList<>();
-        super.getCSV().setDataFiltrer((ObservableList<Seisme>) super.getCSV().getData());
     }
 
     @FXML
