@@ -53,6 +53,8 @@ public class SisApplicationModel {
         region.clear();
         de.clear();
         jusqua.clear();
+        intensite.setHighValue(12.0);
+        intensite.setLowValue(0.0);
     }
 
     public void appliquerChangement(){
