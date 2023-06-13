@@ -41,7 +41,6 @@ public class SisMapController extends SisApplicationModel{
     private ArrayList<MapLayer> mapLayerArrayList = new ArrayList<>();
     private final MapPoint francePoint = new MapPoint(46.227638, 2.213749);
     private final MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
-
     @FXML
     private TextField id,region,de,jusqua;      /*On lie cette fois-ci au FXML pour récupérer les données*/
     @FXML
