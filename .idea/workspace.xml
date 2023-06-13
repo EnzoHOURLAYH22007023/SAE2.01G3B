@@ -227,19 +227,19 @@
       <option name="project" value="LOCAL" />
       <updated>1686606798342</updated>
     </task>
-    <task id="LOCAL-00015" summary="add : La couleur bakcground / topbar">
-      <created>1686667009563</created>
+    <task id="LOCAL-00015" summary="add : css Dashboard solo data,mapview region">
+      <created>1686655291351</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1686667009563</updated>
+      <updated>1686655291351</updated>
     </task>
-    <task id="LOCAL-00016" summary="Changer : La couleur bakcground / et les fx:id=&quot; tata&quot;">
-      <created>1686667129389</created>
+    <task id="LOCAL-00016" summary="add : css Dashboard solo data,mapview region">
+      <created>1686658587535</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1686667129389</updated>
+      <updated>1686658587535</updated>
     </task>
     <option name="localTasksCounter" value="17" />
     <servers />
@@ -275,6 +275,7 @@
     <MESSAGE value="ajout : Methode afficheSeismeCarte pour afficher les points sur la carte&#10;et refactor du nom de certaine classe" />
     <MESSAGE value="add : filtre de base" />
     <MESSAGE value="add : LineChart affiche les données" />
+    <MESSAGE value="add : css Dashboard solo data,mapview region" />
     <MESSAGE value="add : La couleur bakcground / topbar" />
     <MESSAGE value="Changer : La couleur bakcground / et les fx:id=&quot; tata&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="Changer : La couleur bakcground / et les fx:id=&quot; tata&quot;" />
