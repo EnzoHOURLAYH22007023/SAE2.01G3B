@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="fix : rangement du gridpane filtre">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : LineChart affiche les données">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/DashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/DashboardView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +25,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="esthetique" />
   </component>
   <component name="Git.Settings">
     <excluded-from-favorite>
@@ -64,23 +62,10 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Sabri-(Dashboard)" />
+        <entry key="$PROJECT_DIR$" value="esthetique" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="c10b7ada-a643-4bae-a47b-761c5a73d199" />
-        <option name="url" value="https://github.com/EnzoHOURLAYH22007023/SAE2.01G3B.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,20 +76,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Massko/Desktop/Enzo PC/GitHub/tp2-g3-EnzoHOURLAYH22007023&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Massko/Desktop/Enzo PC/GitHub/SAE2.01G3B",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.externalResources"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Massko\Desktop\Enzo PC\GitHub\SAE2.01G3B\src\main\resources\com\sae201g3b" />
@@ -119,7 +105,7 @@
   <component name="RunManager">
     <configuration name="SisMap" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.sae201g3b.SisMapApplication" />
-      <module name="SAE201G3B" />
+      <module name="SAE2.01G3B" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,7 +114,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="ajout : Methode afficheSeismeCarte pour afficher les points sur la carte&#10;et refactor du nom de certaine classe" />
+      <changelist id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : LineChart affiche les données" />
       <created>1685957103851</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -230,56 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686415115280</updated>
     </task>
-    <task id="LOCAL-00014" summary="feat : afficherSesmeCarte refresh la carte">
-      <created>1686488627278</created>
+    <task id="LOCAL-00014" summary="add : LineChart affiche les données">
+      <created>1686606798342</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1686488627278</updated>
+      <updated>1686606798342</updated>
     </task>
-    <task id="LOCAL-00015" summary="fix : suppréssion des boutons carte et tableau remplacer par des MenuItem">
-      <created>1686488736872</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1686488736872</updated>
-    </task>
-    <task id="LOCAL-00016" summary="add : Fichier Css">
-      <created>1686504472597</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1686504472597</updated>
-    </task>
-    <task id="LOCAL-00017" summary="fix : petit nettoyage">
-      <created>1686504908064</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1686504908064</updated>
-    </task>
-    <task id="LOCAL-00018" summary="add : css label">
-      <created>1686557091636</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1686557091636</updated>
-    </task>
-    <task id="LOCAL-00019" summary="add : Css slider">
-      <created>1686558032227</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1686558032227</updated>
-    </task>
-    <task id="LOCAL-00020" summary="fix : rangement du gridpane filtre">
-      <created>1686562000485</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1686562000485</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,14 +256,8 @@
     <MESSAGE value="ajout : Commentaire dans le bon format pour ImportationCSV.java" />
     <MESSAGE value="ajout : Methode afficheSeismeCarte pour afficher les points sur la carte&#10;et refactor du nom de certaine classe" />
     <MESSAGE value="add : filtre de base" />
-    <MESSAGE value="feat : afficherSesmeCarte refresh la carte" />
-    <MESSAGE value="fix : suppréssion des boutons carte et tableau remplacer par des MenuItem" />
-    <MESSAGE value="add : Fichier Css" />
-    <MESSAGE value="fix : petit nettoyage" />
-    <MESSAGE value="add : css label" />
-    <MESSAGE value="add : Css slider" />
-    <MESSAGE value="fix : rangement du gridpane filtre" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : rangement du gridpane filtre" />
+    <MESSAGE value="add : LineChart affiche les données" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : LineChart affiche les données" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
