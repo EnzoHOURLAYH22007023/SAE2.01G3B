@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="fix : commentaire" />
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="update Workspace" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -360,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686689010549</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update Workspace">
+      <created>1686689377080</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1686689377080</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +385,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajout : mise en place des filtre (premièrement avec les région)" />
     <MESSAGE value="feat : affiche les données dans le tableau" />
     <MESSAGE value="feat : Couleur des points change celon l'intensité du seisme" />
     <MESSAGE value="Merge : Filtre.java et ImportationCSV.java + getFiltre() et filtrer() + optimisation + debut comment" />
@@ -403,7 +409,8 @@
     <MESSAGE value="add : A propos contenue" />
     <MESSAGE value="feat : Range slider réinitialise High et Low value" />
     <MESSAGE value="fix : commentaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : commentaire" />
+    <MESSAGE value="update Workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Workspace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
