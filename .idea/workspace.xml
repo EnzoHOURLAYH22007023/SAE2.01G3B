@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="feat : Range slider réinitialise High et Low value" />
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="fix : commentaire" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -353,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686686657138</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="fix : commentaire">
+      <created>1686689010549</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1686689010549</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +378,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajout : CSV dans Array" />
     <MESSAGE value="ajout : mise en place des filtre (premièrement avec les région)" />
     <MESSAGE value="feat : affiche les données dans le tableau" />
     <MESSAGE value="feat : Couleur des points change celon l'intensité du seisme" />
@@ -396,7 +402,8 @@
     <MESSAGE value="add : Slider rainbow + legende couleur points" />
     <MESSAGE value="add : A propos contenue" />
     <MESSAGE value="feat : Range slider réinitialise High et Low value" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : Range slider réinitialise High et Low value" />
+    <MESSAGE value="fix : commentaire" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix : commentaire" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
