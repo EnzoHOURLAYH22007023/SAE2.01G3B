@@ -17,10 +17,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.RadioMenuItem;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import org.controlsfx.control.RangeSlider;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,7 +48,7 @@ public class SisMapController {
     @FXML
     private TextField id,region,de,jusqua;
     @FXML
-    private Slider intensite;
+    private RangeSlider intensite;
     private List<Seisme> data;
     private List<Seisme> datafiltrer;
     private Database CSV = new Database();
@@ -147,8 +151,13 @@ public class SisMapController {
             idFiltre = "Date";
             filtrer(filtre,filtre2,idFiltre);
         }
-        if (intensite.getValue() != 0){
-            //a completer
+        if (intensite.getHighValue() != 0){
+            filtre2 = Float.toString((float) intensite.getHighValue());
+        }
+        if (intensite.getLowValue() != 0){
+            filtre = Float.toString((float) intensite.getLowValue());
+            idFiltre = "Intensite";
+            filtrer(filtre,filtre2,idFiltre);
         }
         resetPoint();
         datafiltrer = getDataFiltrer();
