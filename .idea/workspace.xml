@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : Css slider">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_06_2023_09_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_12_06_2023_09_11__Changes_.xml" afterDir="false" />
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : LineChart affiche les données">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/DashboardView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/DashboardView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +83,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Massko/Desktop/Enzo PC/GitHub/tp1-g3-EnzoHOURLAYH22007023",
+    "last_opened_file_path": "C:/Users/Massko/Desktop/Enzo PC/GitHub/SAE2.01G3B",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,7 +114,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6c6fabce-129a-448e-ba71-6c7c02b215cb" name="Changes" comment="ajout : Methode afficheSeismeCarte pour afficher les points sur la carte&#10;et refactor du nom de certaine classe" />
+      <changelist id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : LineChart affiche les données" />
       <created>1685957103851</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -218,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686415115280</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add : LineChart affiche les données">
+      <created>1686606798342</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1686606798342</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +256,8 @@
     <MESSAGE value="ajout : Commentaire dans le bon format pour ImportationCSV.java" />
     <MESSAGE value="ajout : Methode afficheSeismeCarte pour afficher les points sur la carte&#10;et refactor du nom de certaine classe" />
     <MESSAGE value="add : filtre de base" />
-    <option name="LAST_COMMIT_MESSAGE" value="add : filtre de base" />
+    <MESSAGE value="add : LineChart affiche les données" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : LineChart affiche les données" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
