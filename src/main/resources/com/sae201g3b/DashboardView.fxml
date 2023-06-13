@@ -11,9 +11,9 @@
     <top>
         <MenuBar>
             <Menu text="Fichier">
-                <MenuItem onAction="#changerFXML" text="Carte" />
+                <MenuItem onAction="#changerFXMLMap" text="Carte" />
                 <SeparatorMenuItem />
-                <MenuItem text="Importer CSV" />
+                <MenuItem text="Importer CSV" onAction="#changerFXMLImport"/>
             </Menu>
             <Menu text="A propos.." />
         </MenuBar>
@@ -66,13 +66,13 @@
             <VBox styleClass="vbox-filtre">
                 <GridPane hgap="5.0" styleClass="gridpane-filtre" vgap="10.0" BorderPane.alignment="CENTER">
                     <Label text="Id:" />
-                    <TextField fx:id="id" promptText="Exp: 160001" GridPane.columnIndex="1" />
+                    <TextField promptText="Exp: 160001" GridPane.columnIndex="1" />
                     <Label text="Région:" GridPane.rowIndex="1" />
-                    <TextField fx:id="region" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     <Label text="De:" GridPane.rowIndex="2" />
-                    <TextField fx:id="de" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <TextField promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                     <Label text="Jusqu'a:" GridPane.rowIndex="3" />
-                    <TextField fx:id="jusqua" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <TextField promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                     <Button onAction="#appliquerChangement" text="Appliquer les changements" GridPane.rowIndex="4" />
                     <Button onAction="#resetFiltreControlleur" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                <columnConstraints>
@@ -91,7 +91,7 @@
                     <Insets topRightBottomLeft="10.0" />
                 </padding>
             </VBox>
-            <RangeSlider fx:id="intensite" highValue="12.0" lowValue="0.0" max="12.0" styleClass="slider">
+            <RangeSlider highValue="12.0" lowValue="0.0" max="12.0" styleClass="slider">
                 <padding>
                     <Insets topRightBottomLeft="10.0" />
                 </padding>

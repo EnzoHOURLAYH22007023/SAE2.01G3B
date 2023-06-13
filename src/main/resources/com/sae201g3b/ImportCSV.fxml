@@ -7,20 +7,16 @@
 
 <?import org.controlsfx.control.RangeSlider?>
 <BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" stylesheets="@SisMap.css"
-            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.SisMapController">
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.ImportCSVControlleur">
     <fx:define>
         <ToggleGroup fx:id="editGroup" />
     </fx:define>
     <top>
         <MenuBar>
             <Menu text="Fichier">
-                <MenuItem text="Dashboard" onAction="#changerFXMLDashboard"/>
+                <MenuItem text="Carte" onAction="#changerFXMLMap"/>
                 <SeparatorMenuItem/>
-                <MenuItem text="Importer CSV" onAction="#changerFXMLImport"/>
-            </Menu>
-            <Menu text="Edit">
-                <RadioMenuItem fx:id="menuCarte" text="Afficher la carte" onAction="#changeCenter" toggleGroup="$editGroup" selected="true"/>
-                <RadioMenuItem fx:id="menuTab" text="Afficher le tableau" onAction="#changeCenter" toggleGroup="$editGroup"/>
+                <MenuItem text="Dashboard" onAction="#changerFXMLDashboard"/>
             </Menu>
             <Menu text="A propos..">
                 <MenuItem text="Auteur :">
@@ -29,7 +25,9 @@
         </MenuBar>
     </top>
     <center>
-        <TableView fx:id="tableau">
+        <Label text="Fichier"/>
+        <Button text="Parcourir" onAction="#btnParcourir"/>
+        <!--<TableView fx:id="tableau">
             <columns>
                 <TableColumn fx:id="colonneId" text="Identifiant" />
                 <TableColumn fx:id="colonneDate" text="Date" />
@@ -43,10 +41,10 @@
                 <TableColumn fx:id="colonneQualite" text="Qualité" />
             </columns>
         </TableView>
-        <MapView fx:id="france"/>
+        <MapView fx:id="france"/>-->
     </center>
     <right>
-        <HBox spacing="10">
+        <!--<HBox spacing="10">
             <VBox styleClass="vbox-filtre">
                 <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER" styleClass="gridpane-filtre" >
                     <Label text="Id:" />
@@ -69,9 +67,9 @@
                     <Insets topRightBottomLeft="10.0" />
                 </padding>
             </RangeSlider>
-             <BorderPane.margin>
+            <BorderPane.margin>
                 <Insets bottom="50.0" left="20.0" right="20.0" top="50.0" />
-             </BorderPane.margin>
-        </HBox>
+            </BorderPane.margin>
+        </HBox>-->
     </right>
 </BorderPane>

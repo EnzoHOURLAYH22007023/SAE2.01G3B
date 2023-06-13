@@ -162,7 +162,7 @@ public class SisMapController extends SisApplicationModel{
         afficheSeismeCarte();
     }
     @FXML
-    public void changerFXML() {
+    public void changerFXMLDashboard() {
         /**
          * A VOIR
          *
@@ -170,6 +170,23 @@ public class SisMapController extends SisApplicationModel{
          */
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DashboardView.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
+            Stage stage = (Stage) borderPane.getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void changerFXMLImport() {
+        /**
+         * A VOIR
+         *
+         * @author      Alexandre Crespin
+         */
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ImportCSV.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
             Stage stage = (Stage) borderPane.getScene().getWindow();
             stage.setScene(scene);
