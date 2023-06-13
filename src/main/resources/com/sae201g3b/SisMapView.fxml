@@ -14,8 +14,6 @@
     <top>
         <MenuBar>
             <Menu text="Fichier">
-                <MenuItem text="Dashboard" onAction="#changerFXMLDashboard"/>
-                <SeparatorMenuItem/>
                 <MenuItem text="Importer CSV" onAction="#importFile"/>
             </Menu>
             <Menu text="Edit">
