@@ -56,10 +56,16 @@ public class SisApplicationModel {
             CSV.filtrer(filtre,filtre2,idFiltre);
         }
         if (jusqua.getText() != ""){
-            filtre2 = jusqua.getText();
+            if (jusqua.getText().length() == 4 || jusqua.getText().length() == 7)           /*Si les dates ne sont pas marqué complétement*/
+                filtre2 = jusqua.getText() + "/";
+            else
+                filtre2 = jusqua.getText();
         }
         if (de.getText() != ""){
-            filtre = de.getText();
+            if (de.getText().length() == 4 || de.getText().length() == 7)                   /*Si les dates ne sont pas marqué complétement*/
+                filtre = de.getText() + "/";
+            else
+                filtre = de.getText();
             idFiltre = "Date";
             CSV.filtrer(filtre,filtre2,idFiltre);
         }
