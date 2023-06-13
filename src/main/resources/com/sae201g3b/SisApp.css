@@ -79,3 +79,7 @@ root {
     -fx-text-fill: Red;
     -fx-font-family: "Arial Narrow";
 }
+
+.barchart .xaxis{
+    -fx-tick-label-fill: black;
+}
