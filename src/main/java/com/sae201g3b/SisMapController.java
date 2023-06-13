@@ -24,9 +24,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.controlsfx.control.RangeSlider;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -231,6 +233,21 @@ public class SisMapController extends SisApplicationModel{
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void importFile(){
+        FileChooser file = new FileChooser();
+        file.setTitle("Ouvrir le fichier");
+        file.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("CSV File", "*.csv"));
+        File fichier = file.showOpenDialog(new Stage());
+        String path = fichier.getAbsolutePath();
+        if(!path.isEmpty()){
+            getCSV().setCheminFichier(path);
+            getCSV().ImportCSV();
+        }
+        appliquerChangement();
+        resetFiltreControlleur();
     }
 
  }

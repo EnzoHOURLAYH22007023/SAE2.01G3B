@@ -16,7 +16,7 @@
             <Menu text="Fichier">
                 <MenuItem text="Dashboard" onAction="#changerFXMLDashboard"/>
                 <SeparatorMenuItem/>
-                <MenuItem text="Importer CSV" onAction="#changerFXMLImport"/>
+                <MenuItem text="Importer CSV" onAction="#importFile"/>
             </Menu>
             <Menu text="Edit">
                 <RadioMenuItem fx:id="menuCarte" text="Afficher la carte" onAction="#changeCenter" toggleGroup="$editGroup" selected="true"/>

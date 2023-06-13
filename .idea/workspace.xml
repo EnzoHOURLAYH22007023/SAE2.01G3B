@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="ajout : commentaire">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="Petit refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
     </list>

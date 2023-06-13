@@ -24,6 +24,8 @@ public class Database {
     /*Un ListProperty qui permet de stocker toutes les données du CSV*/
     private ListProperty<Seisme> data;
 
+    private String cheminFichier;
+
     //------------PARTIE IMPORTATION DES DATA--------------
     public Database(){
         /**
@@ -32,6 +34,7 @@ public class Database {
          * @author      Enzo Hourlay / Alexandre Crespin
          */
         data = new SimpleListProperty<>(FXCollections.observableArrayList());               /*Initialisation de data comme une SimpleListProperty*/
+        cheminFichier = "src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
         ImportCSV();                                                                        /*Importation du CSV*/
     }
 
@@ -39,6 +42,10 @@ public class Database {
     public List<Seisme> getData() {return data;}
     public void setData(ObservableList<Seisme> data) {this.data.set(data);}
     public ListProperty<Seisme> dataProperty(){return data;}
+
+    public String getCheminFichier() {return cheminFichier;}
+
+    public void setCheminFichier(String cheminFichier) {this.cheminFichier = cheminFichier;}
 
     public void ImportCSV() {
         /**
@@ -49,7 +56,6 @@ public class Database {
          * @see         Seisme
          */
         /*On donne le chemin vers le fichier*/
-        String cheminFichier = "src/main/resources/com/sae201g3b/SisFrance_seismes_20230604151458.csv";
 
         try (BufferedReader br = new BufferedReader(new FileReader(cheminFichier))) {
             String ligne;
