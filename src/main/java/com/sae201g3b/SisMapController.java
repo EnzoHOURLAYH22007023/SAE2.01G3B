@@ -4,7 +4,7 @@
  * @version 1.0
  *
  * @see com.sae201g3b.SisMapApplication
- * @author Enzo HOURLAY
+ * @author Enzo HOURLAY / Alexandre Crespin
  */
 package com.sae201g3b;
 
@@ -42,11 +42,16 @@ public class SisMapController extends SisApplicationModel{
     private final MapPoint francePoint = new MapPoint(46.227638, 2.213749);
     private final MapPoint francePoint2 = new MapPoint(46.227600, 2.213700);
     @FXML
-    private TextField id,region,de,jusqua;
+    private TextField id,region,de,jusqua;      /*On lie cette fois-ci au FXML pour récupérer les données*/
     @FXML
     private RangeSlider intensite;
 
     public void initialize(){
+        /**
+         * initialize va se lancer dés le début de la page et permet d'initialiser nos données
+         *
+         * @author      Enzo Hourlay
+         */
         /* Ligne nécessaire pour empêcher de l'erreur sur la map Gluon */
         System.setProperty("javafx.platform", "desktop");
         System.setProperty("http.agent", "Gluon Mobile/1.0.3");
@@ -76,6 +81,11 @@ public class SisMapController extends SisApplicationModel{
     }
 
     public void changeCenter(ActionEvent event){
+        /**
+         * A VOIR
+         *
+         * @author      Enzo Hourlay
+         */
         if(event.getSource()==menuCarte){
             borderPane.setCenter(france);
             afficheSeismeCarte();
@@ -85,6 +95,11 @@ public class SisMapController extends SisApplicationModel{
     }
 
     public void afficheSeismeCarte(){
+        /**
+         * A VOIR
+         *
+         * @author      Enzo Hourlay
+         */
         for(Seisme seisme: super.getCSV().getData()){
             try {
                 MapLayer layer = new SeismePoint(new MapPoint(Float.parseFloat(seisme.getLatitude()),
@@ -101,6 +116,11 @@ public class SisMapController extends SisApplicationModel{
     }
 
     public void resetPoint(){
+        /**
+         * A VOIR
+         *
+         * @author      Enzo Hourlay
+         */
         for(MapLayer layer : mapLayerArrayList){
             france.removeLayer(layer);
         }
@@ -109,6 +129,14 @@ public class SisMapController extends SisApplicationModel{
 
     @FXML
     public void resetFiltreControlleur(){
+        /**
+         * resetFiltreControlleur est le fils de cette même fonction dans SisApplicationModel
+         * Elle ajoute quelques ligne importante comme un reset des points de la map et un affichage du reset
+         *
+         * @author      Enzo Hourlay / Alexandre Crespin
+         *
+         * @see         SisApplicationModel
+         */
         super.resetFiltreControlleur();
         resetPoint();
         afficheSeismeCarte();
@@ -116,6 +144,13 @@ public class SisMapController extends SisApplicationModel{
 
     @FXML
     public void appliquerChangement(){
+        /**
+         * appliquerChangement est le fils de cette même fonction dans SisApplicationModel
+         * Elle recupére les donné des entrées utilisateur et les applique dans la fonction parent
+         * Elle reset aussi les points et affiche ceux-ci
+         *
+         * @author      Alexandre Crespin
+         */
         super.setId(id);
         super.setRegion(region);
         super.setDe(de);
@@ -128,6 +163,11 @@ public class SisMapController extends SisApplicationModel{
     }
     @FXML
     public void changerFXML() {
+        /**
+         * A VOIR
+         *
+         * @author      Enzo Hourlay
+         */
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DashboardView.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1280, 720);

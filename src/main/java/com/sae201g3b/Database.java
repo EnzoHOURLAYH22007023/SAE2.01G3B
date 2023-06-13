@@ -72,6 +72,7 @@ public class Database {
          * createSeisme permet de recréer les Seisme apres avoir recuperer les data
          *
          * @return      new Seisme
+         * @param       String[] valeurs
          *
          * @see         Seisme
          */

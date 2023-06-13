@@ -42,48 +42,32 @@ public class Seisme {
         Qualite = qualite;
     }
 
-    /**
-     * Getters des attributs de la classe Seisme
-     *
-     * @return      attributs
-     *
-     */
+    /*Getters des attributs de la classe Seisme*/
     public String getIdentifiant() {
         return Identifiant;
     }
-
     public String getDate() {
         return Date;
     }
-
     public String getHeure() {
         return Heure;
     }
-
     public String getNom() {
         return Nom;
     }
-
-    public String getRegion() {
-        return Region;
-    }
-
+    public String getRegion() {return Region;}
     public String getChoc() {
         return Choc;
     }
-
     public String getLatitude() {
         return Latitude;
     }
-
     public String getLongitude() {
         return Longitude;
     }
-
     public String getIntensite() {
         return Intensite;
     }
-
     public String getQualite() {
         return Qualite;
     }
