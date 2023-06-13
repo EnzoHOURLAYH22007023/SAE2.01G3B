@@ -10,7 +10,7 @@
 <BorderPane fx:id="borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="720.0" minWidth="1280.0" stylesheets="@SisApp.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sae201g3b.DashboardController">
     <top>
         <MenuBar fx:id="MBar">
-            <Menu fx:id="M" text="Fichier">
+            <Menu text="Fichier">
                 <MenuItem onAction="#changerFXML" text="Carte" />
                 <SeparatorMenuItem />
                 <MenuItem text="Importer CSV" />
@@ -72,15 +72,15 @@
     </center>
     <right>
         <HBox spacing="10">
-            <VBox fx:id="Utilisateur" styleClass="vbox-filtre">
-                <GridPane fx:id="GP" hgap="5.0" styleClass="gridpane-filtre" vgap="10.0" BorderPane.alignment="CENTER">
-                    <Label fx:id="L1" text="Id:" />
+            <VBox styleClass="vbox-filtre">
+                <GridPane hgap="5.0" styleClass="gridpane-filtre" vgap="10.0" BorderPane.alignment="CENTER">
+                    <Label  text="Id:" />
                     <TextField fx:id="id" promptText="Exp: 160001" GridPane.columnIndex="1" />
-                    <Label fx:id="L2" text="Région:" GridPane.rowIndex="1" />
+                    <Label text="Région:" GridPane.rowIndex="1" />
                     <TextField fx:id="region" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                    <Label fx:id="L3" text="De:" GridPane.rowIndex="2" />
+                    <Label  text="De:" GridPane.rowIndex="2" />
                     <TextField fx:id="de" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                    <Label fx:id="L4" text="Jusqu'a:" GridPane.rowIndex="3" />
+                    <Label text="Jusqu'a:" GridPane.rowIndex="3" />
                     <TextField fx:id="jusqua" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                     <Button fx:id="Appliquer" text="Appliquer les changements" GridPane.rowIndex="4" />
                     <Button fx:id="Reset" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4" />
