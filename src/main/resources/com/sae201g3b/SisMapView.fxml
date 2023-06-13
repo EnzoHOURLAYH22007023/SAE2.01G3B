@@ -104,20 +104,27 @@
     <right>
         <HBox spacing="10">
             <VBox styleClass="vbox-filtre">
-                <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER" styleClass="gridpane-filtre" >
-                    <Label text="Id:" />
+                <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER" styleClass="gridpane-filtre">
+                    <Label text="Id:"/>
                     <TextField fx:id="id" promptText="Exp: 160001" GridPane.columnIndex="1"/>
-                    <Label text="Région:" GridPane.rowIndex="1" />
-                    <TextField fx:id="region" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                    <Label text="De:" GridPane.rowIndex="2" />
+                    <Label text="Région:" GridPane.rowIndex="1"/>
+                    <TextField fx:id="region" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1"/>
+                    <Label text="De:" GridPane.rowIndex="2"/>
                     <TextField fx:id="de" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                    <Label text="Jusqu'a:" GridPane.rowIndex="3" />
-                    <TextField fx:id="jusqua" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <Label text="Jusqu'a:" GridPane.rowIndex="3"/>
+                    <TextField fx:id="jusqua" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1"
+                               GridPane.rowIndex="3"/>
                     <Button onAction="#appliquerChangement" text="Appliquer les changements" GridPane.rowIndex="4"/>
-                    <Button onAction="#resetFiltreControlleur" text="Réinitialiser" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                    <Button onAction="#resetFiltreControlleur" text="Réinitialiser" GridPane.columnIndex="1"
+                            GridPane.rowIndex="4"/>
+                    <Label fx:id="TVert" text="Vert =  0 &lt; 3" GridPane.rowIndex="5"/>
+                    <Label fx:id="TJaune" text="Jaune = 3 &lt; 6" GridPane.rowIndex="6"/>
+                    <Label fx:id="TOrange" text="Orange = 6 &lt; 9" GridPane.rowIndex="7"/>
+                    <Label fx:id="TRouge" text="Rouge = 9 &lt; 12" GridPane.rowIndex="8"/>
                 </GridPane>
                 <padding>
-                    <Insets topRightBottomLeft="10.0" />
+                    <Insets topRightBottomLeft="10.0"/>
                 </padding>
             </VBox>
             <RangeSlider fx:id="intensite" styleClass="slider" max="12.0" highValue="12.0" lowValue="0.0">
