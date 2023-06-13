@@ -108,7 +108,7 @@
                     <Label text="Id:"/>
                     <TextField fx:id="id" promptText="Exp: 160001" GridPane.columnIndex="1"/>
                     <Label text="Région:" GridPane.rowIndex="1"/>
-                    <TextField fx:id="region" promptText="Exp: Pyrenees Occidentales" GridPane.columnIndex="1"
+                    <TextField fx:id="region" promptText="Exp: Alsace" GridPane.columnIndex="1"
                                GridPane.rowIndex="1"/>
                     <Label text="De:" GridPane.rowIndex="2"/>
                     <TextField fx:id="de" promptText="Exp: AAAA/MM/JJ" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
