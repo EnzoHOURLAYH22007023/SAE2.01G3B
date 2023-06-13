@@ -11,6 +11,7 @@ package com.sae201g3b;
 import com.gluonhq.maps.MapLayer;
 import com.gluonhq.maps.MapPoint;
 import com.gluonhq.maps.MapView;
+import javafx.beans.binding.StringBinding;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -51,7 +52,8 @@ public class SisMapController extends SisApplicationModel{
     @FXML
     private RangeSlider intensite;
     @FXML
-    private Label nbSeisme,maxInt,minInt;
+    private Label nbSeisme,maxInt,minInt,moyInt;
+    private StringBinding trouverMaxInt,trouverMinInt,calculMoyInt;
     @FXML
     private GridPane dashboard;
     @FXML
@@ -85,13 +87,59 @@ public class SisMapController extends SisApplicationModel{
         colonneChoc.setCellValueFactory(new PropertyValueFactory<>("Choc"));
         colonneQualite.setCellValueFactory(new PropertyValueFactory<>("Qualite"));
 
-        //ObservableList<Seisme> listeSeisme = FXCollections.observableArrayList(CSV.getData());
-        //tableau.setItems(listeSeisme);
         tableau.itemsProperty().bind(super.getCSV().dataProperty());
 
         nbSeisme.textProperty().bind(getCSV().dataProperty().sizeProperty().asString());
-        //maxInt.textProperty().bind(getCSV().getData().stream().max().asString());
-        //minInt.textProperty().bind(getCSV().dataProperty().sizeProperty().asString());
+
+        trouverMaxInt = new StringBinding() {
+            {
+                super.bind(getCSV().dataProperty());
+            }
+            @Override
+            protected String computeValue() {
+                Double max = 0.0;
+                for (Seisme seisme : getCSV().getData()){
+                    Double nb = Double.parseDouble(seisme.getIntensite());
+                    if(nb > max)
+                        max = nb;
+                }
+                return max.toString();
+            }
+        };
+        maxInt.textProperty().bind(trouverMaxInt);
+
+        trouverMinInt = new StringBinding() {
+            {
+                super.bind(getCSV().dataProperty());
+            }
+            @Override
+            protected String computeValue() {
+                Double min = 12.0;
+                for (Seisme seisme : getCSV().getData()){
+                    Double nb = Double.parseDouble(seisme.getIntensite());
+                    if(nb < min)
+                        min = nb;
+                }
+                return min.toString();
+            }
+        };
+        minInt.textProperty().bind(trouverMinInt);
+
+        calculMoyInt = new StringBinding() {
+            {
+                super.bind(getCSV().dataProperty());
+            }
+            @Override
+            protected String computeValue() {
+                double somme = 0.0;
+                for (Seisme seisme : getCSV().getData()){
+                    somme += Double.parseDouble(seisme.getIntensite());
+                }
+                Double moy = somme/getCSV().getData().size();
+                return moy.toString();
+            }
+        };
+        moyInt.textProperty().bind(calculMoyInt);
 
         afficheSeismeCarte();
         initialiseGraph();
@@ -152,14 +200,30 @@ public class SisMapController extends SisApplicationModel{
          *
          * @author Enzo Hourlay
          */
+        ArrayList<String> annees = new ArrayList<>();
+        ArrayList<Integer> nbSeisme = new ArrayList<>();
         ObservableList<XYChart.Data<String, Number>> nouvData = FXCollections.observableList(new ArrayList<>());
         for (Seisme seisme : getCSV().getData()) {
             Float intensite = Float.parseFloat(seisme.getIntensite());
             String antmp = seisme.getDate().substring(0, 4);
             nouvData.add(new XYChart.Data<>(antmp, intensite));
+            String year = seisme.getDate().substring(0,4);
+            if(!annees.contains(year)){
+                annees.add(seisme.getDate().substring(0,4));
+                nbSeisme.add(1);
+            } else {
+                int i = annees.indexOf(year);
+                nbSeisme.set(i,nbSeisme.get(i)+1);
+            }
         }
         lineChart.setData(FXCollections.observableArrayList(new XYChart.Series<>(nouvData)));
-        barChart.setData(FXCollections.observableArrayList(new XYChart.Series<>(nouvData)));
+
+
+        ObservableList<XYChart.Data<String, Number>> nouvData2 = FXCollections.observableList(new ArrayList<>());
+        for (int i = 0 ; i<annees.size() ; ++i){
+            nouvData2.add(new XYChart.Data<>(annees.get(i), nbSeisme.get(i)));
+        }
+        barChart.setData(FXCollections.observableArrayList(new XYChart.Series<>(nouvData2)));
     }
 
     @FXML

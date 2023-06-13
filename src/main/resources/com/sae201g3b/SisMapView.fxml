@@ -68,6 +68,10 @@
                     <Label text="Moin importante intesité :" />
                     <Label fx:id="minInt" text="?" />
                 </VBox>
+                <VBox alignment="CENTER">
+                    <Label text="Moyenne intensité :" />
+                    <Label fx:id="moyInt" text="?" />
+                </VBox>
             </HBox>
         </GridPane>
         <TableView fx:id="tableau">

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="truc incompéhensible">
+    <list default="true" id="a78e7f67-bdc3-415c-81de-bc7feb0b5be9" name="Changes" comment="add : Dashboard abstraction de la carte region">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sae201g3b/SisMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/sae201g3b/SisMapView.fxml" afterDir="false" />
@@ -281,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686674881777</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add : Dashboard abstraction de la carte region">
+      <created>1686676571493</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1686676571493</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +329,8 @@
     <MESSAGE value="feat : Import File possible" />
     <MESSAGE value="App : V2.0" />
     <MESSAGE value="truc incompéhensible" />
-    <option name="LAST_COMMIT_MESSAGE" value="truc incompéhensible" />
+    <MESSAGE value="add : Dashboard abstraction de la carte region" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : Dashboard abstraction de la carte region" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
